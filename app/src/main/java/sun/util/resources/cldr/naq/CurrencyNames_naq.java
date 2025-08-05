@@ -1,0 +1,13 @@
+package sun.util.resources.cldr.naq;
+
+import javafx.fxml.FXMLLoader;
+import sun.util.resources.OpenListResourceBundle;
+
+/* loaded from: cldrdata.jar:sun/util/resources/cldr/naq/CurrencyNames_naq.class */
+public class CurrencyNames_naq extends OpenListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"NAD", FXMLLoader.EXPRESSION_PREFIX}, new Object[]{"aed", "United Arab Emirates Dirham"}, new Object[]{"aoa", "Angolan Kwanzab"}, new Object[]{"aud", "Australian Dollari"}, new Object[]{"bhd", "Bahrain Dinar"}, new Object[]{"bif", "Burundi Franc"}, new Object[]{"bwp", "Botswanan Pulab"}, new Object[]{"cad", "Canadian Dollari"}, new Object[]{"cdf", "Congolese Franc"}, new Object[]{"chf", "Swiss Franci"}, new Object[]{"cny", "Chinese Yuan Renminbi"}, new Object[]{"cve", "Escudo Caboverdiano"}, new Object[]{"djf", "Djibouti Franc"}, new Object[]{"dzd", "Algerian Dinar"}, new Object[]{"egp", "Egytian Ponds"}, new Object[]{"ern", "Eritreian Nakfa"}, new Object[]{"etb", "Ethiopian Birr"}, new Object[]{"eur", "Eurob"}, new Object[]{"gbp", "British Ponds"}, new Object[]{"ghc", "Ghana Cedi"}, new Object[]{"gmd", "Gambia Dalasi"}, new Object[]{"gns", "Guinea Franc"}, new Object[]{"inr", "Indian Rupee"}, new Object[]{"jpy", "Japanese Yenni"}, new Object[]{"kes", "Kenyan Shilling"}, new Object[]{"kmf", "Comorian Franc"}, new Object[]{"lrd", "Liberian Dollar"}, new Object[]{"lsl", "Lesotho Loti"}, new Object[]{"lyd", "Libyan Dinar"}, new Object[]{"mad", "Moroccan Dirham"}, new Object[]{"mga", "Malagasy Franc"}, new Object[]{"mro", "Mauritania Ouguiya"}, new Object[]{"mur", "Mauritius Rupeeb"}, new Object[]{"mwk", "Malawian Kwachab"}, new Object[]{"mzm", "Mozambique Metical"}, new Object[]{"nad", "Namibia Dollari"}, new Object[]{"ngn", "Nigerian Naira"}, new Object[]{"rwf", "Rwanda Franci"}, new Object[]{"sar", "Saudi Riyal"}, new Object[]{"scr", "Seychelles Rupee"}, new Object[]{"sdg", "Sudanese Dinar"}, new Object[]{"sdp", "Sudanese Ponds"}, new Object[]{"shp", "St Helena Ponds"}, new Object[]{"sll", "Leone"}, new Object[]{"sos", "Somali Shillings"}, new Object[]{"std", "Sao Tome and Principe Dobra"}, new Object[]{"szl", "Lilangeni"}, new Object[]{"tnd", "Tunisian Dinar"}, new Object[]{"tzs", "Tanzanian Shillings"}, new Object[]{"ugx", "Ugandan Shillings"}, new Object[]{"usd", "US Dollari"}, new Object[]{"xaf", "CFA Franc BEAC"}, new Object[]{"xof", "CFA Franc BCEAO"}, new Object[]{"zar", "South African Randi"}, new Object[]{"zmk", "Zambian Kwachab"}, new Object[]{"zwd", "Zimbabwe Dollari"}};
+    }
+}

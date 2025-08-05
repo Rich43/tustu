@@ -1,0 +1,15 @@
+package sun.text.resources.cldr.nn;
+
+import com.sun.org.apache.xerces.internal.impl.xs.SchemaSymbols;
+import java.util.ListResourceBundle;
+import javafx.fxml.FXMLLoader;
+import org.icepdf.core.util.PdfOps;
+
+/* loaded from: cldrdata.jar:sun/text/resources/cldr/nn/FormatData_nn.class */
+public class FormatData_nn extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"MonthNames", new String[]{"januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember", ""}}, new Object[]{"MonthAbbreviations", new String[]{"jan.", "feb.", "mars", "apr.", "mai", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "des.", ""}}, new Object[]{"MonthNarrows", new String[]{"J", PdfOps.F_TOKEN, PdfOps.M_TOKEN, "A", PdfOps.M_TOKEN, "J", "J", "A", PdfOps.S_TOKEN, "O", "N", PdfOps.D_TOKEN, ""}}, new Object[]{"DayNames", new String[]{"søndag", "måndag", "tysdag", "onsdag", "torsdag", "fredag", "laurdag"}}, new Object[]{"DayAbbreviations", new String[]{"sø.", "må.", "ty.", "on.", "to.", "fr.", "la."}}, new Object[]{"DayNarrows", new String[]{PdfOps.S_TOKEN, PdfOps.M_TOKEN, "T", "O", "T", PdfOps.F_TOKEN, "L"}}, new Object[]{"QuarterNames", new String[]{"1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"}}, new Object[]{"QuarterAbbreviations", new String[]{"K1", "K2", "K3", "K4"}}, new Object[]{"AmPmMarkers", new String[]{"formiddag", "ettermiddag"}}, new Object[]{"long.Eras", new String[]{"f.Kr.", "e.Kr."}}, new Object[]{"Eras", new String[]{"f.Kr.", "e.Kr."}}, new Object[]{"field.era", "æra"}, new Object[]{"field.year", "år"}, new Object[]{"field.month", "månad"}, new Object[]{"field.week", "veke"}, new Object[]{"field.weekday", "vekedag"}, new Object[]{"field.dayperiod", "f.m./e.m.-val"}, new Object[]{"field.hour", SchemaSymbols.ATTVAL_TIME}, new Object[]{"field.minute", "minutt"}, new Object[]{"field.second", "sekund"}, new Object[]{"field.zone", "sone"}, new Object[]{"TimePatterns", new String[]{"'kl'. HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"}}, new Object[]{"DatePatterns", new String[]{"EEEE d. MMMM y", "d. MMMM y", "d. MMM y", "dd.MM.yy"}}, new Object[]{"calendarname.gregorian", "gregoriansk kalender"}, new Object[]{"calendarname.gregory", "gregoriansk kalender"}, new Object[]{"calendarname.roc", "kalender for Republikken Kina"}, new Object[]{"calendarname.islamic-civil", "islamsk sivil kalender"}, new Object[]{"calendarname.islamicc", "islamsk sivil kalender"}, new Object[]{"calendarname.japanese", "japansk kalender"}, new Object[]{"calendarname.buddhist", "buddhistisk kalender"}, new Object[]{"calendarname.islamic", "islamsk kalender"}, new Object[]{"DefaultNumberingSystem", "latn"}, new Object[]{"latn.NumberElements", new String[]{",", " ", ";", FXMLLoader.RESOURCE_KEY_PREFIX, "0", FXMLLoader.CONTROLLER_METHOD_PREFIX, "−", "E", "‰", "∞", "NaN"}}, new Object[]{"NumberPatterns", new String[]{"#,##0.###", "#,##0.00 ¤", "#,##0 %"}}};
+    }
+}

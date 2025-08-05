@@ -1,0 +1,13 @@
+package sun.util.resources.cldr.vai;
+
+import javafx.fxml.FXMLLoader;
+import sun.util.resources.OpenListResourceBundle;
+
+/* loaded from: cldrdata.jar:sun/util/resources/cldr/vai/CurrencyNames_vai_Latn.class */
+public class CurrencyNames_vai_Latn extends OpenListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"LRD", FXMLLoader.EXPRESSION_PREFIX}, new Object[]{"aed", "Yunaitɛ Arabhi Ɛmire Dihami"}, new Object[]{"aoa", "Angola Kuwaŋza"}, new Object[]{"aud", "Ɔ́situwa Dala"}, new Object[]{"bhd", "Bharɛŋ Dina"}, new Object[]{"bif", "Bhurundi Furaŋki"}, new Object[]{"bwp", "Bhosuwana Pula"}, new Object[]{"cad", "Kanada Dala"}, new Object[]{"cdf", "Kóngo Furaŋki"}, new Object[]{"chf", "Suwesi Furaŋki"}, new Object[]{"cny", "Chaníĩ Yuwaŋ Rɛŋmimbi"}, new Object[]{"cve", "Ɛsikudo Cabovɛdiyano"}, new Object[]{"djf", "Jibhuti Furaŋki"}, new Object[]{"dzd", "Agiriya Dina"}, new Object[]{"egp", "Míséla Pɔɔ̃"}, new Object[]{"ern", "Ɛritera Nakifa"}, new Object[]{"etb", "Ítiyopiya Bhii"}, new Object[]{"eur", "Yuro"}, new Object[]{"gbp", "Jengési Pɔɔ̃ Sitɛ́liŋ"}, new Object[]{"ghc", "Gana Sidi"}, new Object[]{"gmd", "Gambiya Dalasi"}, new Object[]{"gns", "Gini Furaŋki"}, new Object[]{"inr", "Índiya Rupi"}, new Object[]{"jpy", "Japaniĩ Yɛŋ"}, new Object[]{"kes", "Kénya Siyeŋ"}, new Object[]{"kmf", "Komoro Furaŋki"}, new Object[]{"lrd", "Laibhiya Dala"}, new Object[]{"lsl", "Lisóto Loti"}, new Object[]{"lyd", "Libhiya Dina"}, new Object[]{"mad", "Mɔroko Dihami"}, new Object[]{"mga", "Malagasi Ariyari"}, new Object[]{"mro", "Mɔretani Yugiya"}, new Object[]{"mur", "Mɔreshɔ Rupi"}, new Object[]{"mwk", "Malawi Kuwacha"}, new Object[]{"mzm", "Mozambiki Mɛtikali"}, new Object[]{"nad", "Namibiya Dala"}, new Object[]{"ngn", "Naĩjiriya Naĩra"}, new Object[]{"rwf", "Rawunda Furaŋki"}, new Object[]{"sar", "Lahabu Sawodi Riya"}, new Object[]{"sdg", "Sudaniĩ Pɔɔ̃"}, new Object[]{"shp", "Siŋ Hɛlina Pɔɔ̃"}, new Object[]{"sll", "Liyɔɔ̀"}, new Object[]{"sos", "Somaliya Siyeŋ"}, new Object[]{"std", "Sawo Tombe ɓɛ a Gbawo Dobura"}, new Object[]{"szl", "Lilangeni"}, new Object[]{"tnd", "Tunisiya Dina"}, new Object[]{"tzs", "Taŋzaniya Siyeŋ"}, new Object[]{"ugx", "Yuganda Siyeŋ"}, new Object[]{"usd", "Poo Dala"}, new Object[]{"xaf", "Áfíríka Tɛ Sifa"}, new Object[]{"xof", "Áfíríka Tele Jíí Sifa"}, new Object[]{"zar", "Afirika Kɔi Leŋŋɛ lɔ Randi"}, new Object[]{"zmk", "Zambiya Kuwacha"}, new Object[]{"zwd", "Zimbhabhuwe Dala"}};
+    }
+}

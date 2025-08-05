@@ -1,0 +1,60 @@
+package org.icepdf.ri.common;
+
+import java.awt.Toolkit;
+
+/* loaded from: icepdf-viewer.jar:org/icepdf/ri/common/KeyEventConstants.class */
+public class KeyEventConstants {
+    public static final int KEY_CODE_OPEN_FILE = 79;
+    public static final int KEY_CODE_OPEN_URL = 85;
+    public static final int KEY_CODE_CLOSE = 87;
+    public static final int KEY_CODE_SAVE_AS = 83;
+    public static final int KEY_CODE_PRINT_SETUP = 80;
+    public static final int KEY_CODE_PRINT = 80;
+    public static final int KEY_CODE_EXIT = 81;
+    public static final int KEY_CODE_FIT_ACTUAL = 49;
+    public static final int KEY_CODE_FIT_PAGE = 50;
+    public static final int KEY_CODE_FIT_WIDTH = 51;
+    public static final int KEY_CODE_ZOOM_IN = 73;
+    public static final int KEY_CODE_ZOOM_OUT = 79;
+    public static final int KEY_CODE_ROTATE_LEFT = 76;
+    public static final int KEY_CODE_ROTATE_RIGHT = 82;
+    public static final int KEY_CODE_FIRST_PAGE = 38;
+    public static final int KEY_CODE_PREVIOUS_PAGE = 37;
+    public static final int KEY_CODE_NEXT_PAGE = 39;
+    public static final int KEY_CODE_LAST_PAGE = 40;
+    public static final int KEY_CODE_SEARCH = 83;
+    public static final int KEY_CODE_GOTO = 78;
+    public static final int KEY_CODE_UNDO = 90;
+    public static final int KEY_CODE_REDO = 90;
+    public static final int KEY_CODE_COPY = 67;
+    public static final int KEY_CODE_DELETE = 68;
+    public static final int KEY_CODE_SELECT_ALL = 65;
+    public static final int KEY_CODE_DESELECT_ALL = 65;
+    public static final int MENU_SHORTCUT_KEY_MASK = Toolkit.getDefaultToolkit().getMenuShortcutKeyMask();
+    public static final int MODIFIER_OPEN_FILE = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_OPEN_URL = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_CLOSE = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_SAVE_AS = MENU_SHORTCUT_KEY_MASK | 1;
+    public static final int MODIFIER_PRINT_SETUP = MENU_SHORTCUT_KEY_MASK | 1;
+    public static final int MODIFIER_PRINT = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_EXIT = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_FIT_ACTUAL = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_FIT_PAGE = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_FIT_WIDTH = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_ZOOM_IN = MENU_SHORTCUT_KEY_MASK | 1;
+    public static final int MODIFIER_ZOOM_OUT = MENU_SHORTCUT_KEY_MASK | 1;
+    public static final int MODIFIER_ROTATE_LEFT = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_ROTATE_RIGHT = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_FIRST_PAGE = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_PREVIOUS_PAGE = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_NEXT_PAGE = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_LAST_PAGE = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_SEARCH = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_GOTO = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_UNDO = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_REDO = MENU_SHORTCUT_KEY_MASK | 1;
+    public static final int MODIFIER_COPY = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_DELETE = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_SELECT_ALL = MENU_SHORTCUT_KEY_MASK;
+    public static final int MODIFIER_DESELECT_ALL = MENU_SHORTCUT_KEY_MASK | 1;
+}

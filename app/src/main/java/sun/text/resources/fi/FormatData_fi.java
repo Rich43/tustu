@@ -1,0 +1,16 @@
+package sun.text.resources.fi;
+
+import com.sun.org.apache.xml.internal.security.utils.Constants;
+import javafx.fxml.FXMLLoader;
+import org.icepdf.core.util.PdfOps;
+import sun.util.locale.LanguageTag;
+import sun.util.resources.ParallelListResourceBundle;
+
+/* loaded from: localedata.jar:sun/text/resources/fi/FormatData_fi.class */
+public class FormatData_fi extends ParallelListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.ParallelListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"MonthNames", new String[]{"tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kesäkuuta", "heinäkuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta", ""}}, new Object[]{"standalone.MonthNames", new String[]{"tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu", "heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu", ""}}, new Object[]{"MonthAbbreviations", new String[]{"tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kesäkuuta", "heinäkuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta", ""}}, new Object[]{"standalone.MonthAbbreviations", new String[]{"tammi", "helmi", "maalis", "huhti", "touko", "kesä", "heinä", "elo", "syys", "loka", "marras", "joulu", ""}}, new Object[]{"MonthNarrows", new String[]{"T", PdfOps.H_TOKEN, PdfOps.M_TOKEN, PdfOps.H_TOKEN, "T", PdfOps.K_TOKEN, PdfOps.H_TOKEN, "E", PdfOps.S_TOKEN, "L", PdfOps.M_TOKEN, "J", ""}}, new Object[]{"standalone.MonthNarrows", new String[]{"T", PdfOps.H_TOKEN, PdfOps.M_TOKEN, PdfOps.H_TOKEN, "T", PdfOps.K_TOKEN, PdfOps.H_TOKEN, "E", PdfOps.S_TOKEN, "L", PdfOps.M_TOKEN, "J", ""}}, new Object[]{"long.Eras", new String[]{"ennen Kristuksen syntymää", "jälkeen Kristuksen syntymän"}}, new Object[]{"Eras", new String[]{"eKr.", "jKr."}}, new Object[]{"narrow.Eras", new String[]{"eK", "jK"}}, new Object[]{"DayNames", new String[]{"sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"}}, new Object[]{"standalone.DayNames", new String[]{"sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"}}, new Object[]{"DayAbbreviations", new String[]{"su", "ma", "ti", "ke", "to", "pe", "la"}}, new Object[]{"standalone.DayAbbreviations", new String[]{"su", "ma", "ti", "ke", "to", "pe", "la"}}, new Object[]{"DayNarrows", new String[]{PdfOps.S_TOKEN, PdfOps.M_TOKEN, "T", PdfOps.K_TOKEN, "T", Constants._TAG_P, "L"}}, new Object[]{"standalone.DayNarrows", new String[]{PdfOps.S_TOKEN, PdfOps.M_TOKEN, "T", PdfOps.K_TOKEN, "T", Constants._TAG_P, "L"}}, new Object[]{"NumberElements", new String[]{",", " ", ";", FXMLLoader.RESOURCE_KEY_PREFIX, "0", FXMLLoader.CONTROLLER_METHOD_PREFIX, LanguageTag.SEP, "E", "‰", "∞", "�"}}, new Object[]{"TimePatterns", new String[]{"H.mm.ss z", "'klo 'H.mm.ss", "H:mm:ss", "H:mm"}}, new Object[]{"DatePatterns", new String[]{"d. MMMM yyyy", "d. MMMM yyyy", "d.M.yyyy", "d.M.yyyy"}}, new Object[]{"DateTimePatterns", new String[]{"{1} {0}"}}, new Object[]{"DateTimePatternChars", "GanjkHmsSEDFwWxhKzZ"}, new Object[]{"AmPmMarkers", new String[]{"ap.", "ip."}}, new Object[]{"narrow.AmPmMarkers", new String[]{"ap.", "ip."}}};
+    }
+}

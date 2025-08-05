@@ -1,0 +1,12 @@
+package sun.text.resources.zh;
+
+import sun.util.resources.OpenListResourceBundle;
+
+/* loaded from: localedata.jar:sun/text/resources/zh/JavaTimeSupplementary_zh_TW.class */
+public class JavaTimeSupplementary_zh_TW extends OpenListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"QuarterNames", new String[]{"第1季", "第2季", "第3季", "第4季"}}, new Object[]{"calendarname.buddhist", "佛教曆法"}, new Object[]{"calendarname.gregorian", "公曆"}, new Object[]{"calendarname.gregory", "公曆"}, new Object[]{"calendarname.islamic", "伊斯蘭曆法"}, new Object[]{"calendarname.islamic-civil", "伊斯蘭城市曆法"}, new Object[]{"calendarname.islamicc", "伊斯蘭城市曆法"}, new Object[]{"calendarname.japanese", "日本曆法"}, new Object[]{"calendarname.roc", "民國曆"}, new Object[]{"field.dayperiod", "上午/下午"}, new Object[]{"field.era", "年代"}, new Object[]{"field.hour", "小時"}, new Object[]{"field.minute", "分鐘"}, new Object[]{"field.month", "月"}, new Object[]{"field.second", "秒"}, new Object[]{"field.week", "週"}, new Object[]{"field.weekday", "週天"}, new Object[]{"field.year", "年"}, new Object[]{"field.zone", "時區"}, new Object[]{"islamic.DatePatterns", new String[]{"GGGGy年M月d日EEEE", "GGGGy年M月d日", "GGGGy/M/d", "GGGGy/M/d"}}, new Object[]{"islamic.MonthNames", new String[]{"穆哈蘭姆月", "色法爾月", "賴比月 I", "賴比月 II", "主馬達月 I", "主馬達月 II", "賴哲卜月", "舍爾邦月", "賴買丹月", "閃瓦魯月", "都爾喀爾德月", "都爾黑哲月", ""}}, new Object[]{"java.time.buddhist.DatePatterns", new String[]{"Gy年M月d日EEEE", "Gy年M月d日", "Gy/M/d", "Gy/M/d"}}, new Object[]{"java.time.buddhist.short.Eras", new String[]{"BC", "佛曆"}}, new Object[]{"java.time.islamic.DatePatterns", new String[]{"Gy年M月d日EEEE", "Gy年M月d日", "Gy/M/d", "Gy/M/d"}}, new Object[]{"java.time.japanese.DatePatterns", new String[]{"Gy年M月d日EEEE", "Gy年M月d日", "Gy/M/d", "Gy/M/d"}}, new Object[]{"java.time.japanese.long.Eras", new String[]{"西元", "明治", "大正", "昭和", "平成", "令和"}}, new Object[]{"java.time.japanese.short.Eras", new String[]{"西元", "明治", "大正", "昭和", "平成", "令和"}}, new Object[]{"java.time.roc.DatePatterns", new String[]{"Gy年M月d日EEEE", "Gy年M月d日", "Gy/M/d", "Gy/M/d"}}, new Object[]{"java.time.short.Eras", new String[]{"西元前", "西元"}}, new Object[]{"roc.DatePatterns", new String[]{"GGGGy年M月d日EEEE", "GGGGy年M月d日", "GGGGy/M/d", "GGGGy/M/d"}}, new Object[]{"roc.Eras", new String[]{"民國前", "民國"}}, new Object[]{"roc.short.Eras", new String[]{"民國前", "民國"}}};
+    }
+}

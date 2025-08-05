@@ -1,0 +1,16 @@
+package sun.text.resources.cldr.et;
+
+import com.sun.org.apache.xml.internal.security.utils.Constants;
+import java.util.ListResourceBundle;
+import javafx.fxml.FXMLLoader;
+import org.icepdf.core.util.PdfOps;
+import sun.util.locale.LanguageTag;
+
+/* loaded from: cldrdata.jar:sun/text/resources/cldr/et/FormatData_et.class */
+public class FormatData_et extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"MonthNames", new String[]{"jaanuar", "veebruar", "märts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember", ""}}, new Object[]{"MonthAbbreviations", new String[]{"jaan", "veebr", "märts", "apr", "mai", "juuni", "juuli", "aug", "sept", "okt", "nov", "dets", ""}}, new Object[]{"MonthNarrows", new String[]{"J", "V", PdfOps.M_TOKEN, "A", PdfOps.M_TOKEN, "J", "J", "A", PdfOps.S_TOKEN, "O", "N", PdfOps.D_TOKEN, ""}}, new Object[]{"DayNames", new String[]{"pühapäev", "esmaspäev", "teisipäev", "kolmapäev", "neljapäev", "reede", "laupäev"}}, new Object[]{"DayAbbreviations", new String[]{Constants._TAG_P, "E", "T", PdfOps.K_TOKEN, "N", "R", "L"}}, new Object[]{"DayNarrows", new String[]{Constants._TAG_P, "E", "T", PdfOps.K_TOKEN, "N", "R", "L"}}, new Object[]{"QuarterNames", new String[]{"1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"}}, new Object[]{"QuarterAbbreviations", new String[]{"K1", "K2", "K3", "K4"}}, new Object[]{"QuarterNarrows", new String[]{"1", "2", "3", "4"}}, new Object[]{"AmPmMarkers", new String[]{"enne keskpäeva", "pärast keskpäeva"}}, new Object[]{"long.Eras", new String[]{"enne meie aega", "meie aja järgi"}}, new Object[]{"Eras", new String[]{"e.m.a.", "m.a.j."}}, new Object[]{"field.era", "ajastu"}, new Object[]{"field.year", "aasta"}, new Object[]{"field.month", "kuu"}, new Object[]{"field.week", "nädal"}, new Object[]{"field.weekday", "nädalapäev"}, new Object[]{"field.dayperiod", "enne/pärast lõunat"}, new Object[]{"field.hour", "tund"}, new Object[]{"field.minute", "minut"}, new Object[]{"field.second", "sekund"}, new Object[]{"field.zone", "vöönd"}, new Object[]{"TimePatterns", new String[]{"H:mm.ss zzzz", "H:mm.ss z", "H:mm.ss", "H:mm"}}, new Object[]{"DatePatterns", new String[]{"EEEE, d. MMMM y", "d. MMMM y", "dd.MM.yyyy", "dd.MM.yy"}}, new Object[]{"calendarname.gregorian", "Gregoriuse kalender"}, new Object[]{"calendarname.gregory", "Gregoriuse kalender"}, new Object[]{"calendarname.roc", "Hiina Vabariigi kalender"}, new Object[]{"calendarname.islamic-civil", "islami ilmalik kalender"}, new Object[]{"calendarname.islamicc", "islami ilmalik kalender"}, new Object[]{"calendarname.japanese", "Jaapani kalender"}, new Object[]{"calendarname.buddhist", "budistlik kalender"}, new Object[]{"calendarname.islamic", "islamikalender"}, new Object[]{"DefaultNumberingSystem", "latn"}, new Object[]{"latn.NumberElements", new String[]{".", " ", ";", FXMLLoader.RESOURCE_KEY_PREFIX, "0", FXMLLoader.CONTROLLER_METHOD_PREFIX, LanguageTag.SEP, "E", "‰", "∞", "NaN"}}, new Object[]{"NumberPatterns", new String[]{"#,##0.###", "#,##0.00 ¤", "#,##0%"}}};
+    }
+}

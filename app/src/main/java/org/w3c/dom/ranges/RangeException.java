@@ -1,0 +1,13 @@
+package org.w3c.dom.ranges;
+
+/* loaded from: rt.jar:org/w3c/dom/ranges/RangeException.class */
+public class RangeException extends RuntimeException {
+    public short code;
+    public static final short BAD_BOUNDARYPOINTS_ERR = 1;
+    public static final short INVALID_NODE_TYPE_ERR = 2;
+
+    public RangeException(short code, String message) {
+        super(message);
+        this.code = code;
+    }
+}

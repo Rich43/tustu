@@ -1,0 +1,13 @@
+package sun.util.resources.es;
+
+import org.icepdf.core.util.PdfOps;
+import sun.util.resources.LocaleNamesBundle;
+
+/* loaded from: localedata.jar:sun/util/resources/es/CurrencyNames_es_PA.class */
+public final class CurrencyNames_es_PA extends LocaleNamesBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"PAB", PdfOps.B_TOKEN}};
+    }
+}

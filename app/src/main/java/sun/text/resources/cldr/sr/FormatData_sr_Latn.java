@@ -1,0 +1,15 @@
+package sun.text.resources.cldr.sr;
+
+import java.util.ListResourceBundle;
+import javafx.fxml.FXMLLoader;
+import org.icepdf.core.util.PdfOps;
+import sun.util.locale.LanguageTag;
+
+/* loaded from: cldrdata.jar:sun/text/resources/cldr/sr/FormatData_sr_Latn.class */
+public class FormatData_sr_Latn extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"MonthNames", new String[]{"januar", "februar", "mart", "april", "maj", "jun", "jul", "avgust", "septembar", "oktobar", "novembar", "decembar", ""}}, new Object[]{"MonthAbbreviations", new String[]{"jan", "feb", "mar", "apr", "maj", "jun", "jul", "avg", "sep", "okt", "nov", "dec", ""}}, new Object[]{"MonthNarrows", new String[]{PdfOps.j_TOKEN, PdfOps.f_TOKEN, PdfOps.m_TOKEN, "a", PdfOps.m_TOKEN, PdfOps.j_TOKEN, PdfOps.j_TOKEN, "a", PdfOps.s_TOKEN, "o", PdfOps.n_TOKEN, PdfOps.d_TOKEN, ""}}, new Object[]{"DayNames", new String[]{"nedelja", "ponedeljak", "utorak", "sreda", "četvrtak", "petak", "subota"}}, new Object[]{"DayAbbreviations", new String[]{"ned", "pon", "uto", "sre", "čet", "pet", "sub"}}, new Object[]{"DayNarrows", new String[]{PdfOps.n_TOKEN, "p", "u", PdfOps.s_TOKEN, "č", "p", PdfOps.s_TOKEN}}, new Object[]{"QuarterNames", new String[]{"1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"}}, new Object[]{"QuarterAbbreviations", new String[]{"Q1", "Q2", "Q3", "Q4"}}, new Object[]{"AmPmMarkers", new String[]{"pre podne", "popodne"}}, new Object[]{"long.Eras", new String[]{"Pre nove ere", "Nove ere"}}, new Object[]{"Eras", new String[]{"p. n. e.", "n. e"}}, new Object[]{"field.era", "era"}, new Object[]{"field.year", "godina"}, new Object[]{"field.month", "mesec"}, new Object[]{"field.week", "nedelja"}, new Object[]{"field.weekday", "dan u nedelji"}, new Object[]{"field.dayperiod", "pre podne/ popodne"}, new Object[]{"field.hour", "čas"}, new Object[]{"field.minute", "minut"}, new Object[]{"field.second", "sekund"}, new Object[]{"field.zone", "zona"}, new Object[]{"TimePatterns", new String[]{"HH.mm.ss zzzz", "HH.mm.ss z", "HH.mm.ss", "HH.mm"}}, new Object[]{"DatePatterns", new String[]{"EEEE, dd. MMMM y.", "dd. MMMM y.", "dd.MM.y.", "d.M.yy."}}, new Object[]{"roc.Eras", new String[]{"Pre RK", "RK"}}, new Object[]{"calendarname.islamic-civil", "Islamski civilni kalendar"}, new Object[]{"calendarname.islamicc", "Islamski civilni kalendar"}, new Object[]{"calendarname.buddhist", "Budistički kalendar"}, new Object[]{"calendarname.islamic", "Islamski kalendar"}, new Object[]{"calendarname.gregorian", "Gregorijanski kalendar"}, new Object[]{"calendarname.gregory", "Gregorijanski kalendar"}, new Object[]{"calendarname.roc", "Kalendar Republike Kine"}, new Object[]{"calendarname.japanese", "Japanski kalendar"}, new Object[]{"DefaultNumberingSystem", "latn"}, new Object[]{"latn.NumberElements", new String[]{",", ".", ";", FXMLLoader.RESOURCE_KEY_PREFIX, "0", FXMLLoader.CONTROLLER_METHOD_PREFIX, LanguageTag.SEP, "E", "‰", "∞", "NaN"}}};
+    }
+}

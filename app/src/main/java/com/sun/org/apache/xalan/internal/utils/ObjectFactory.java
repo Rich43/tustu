@@ -1,0 +1,107 @@
+package com.sun.org.apache.xalan.internal.utils;
+
+/* loaded from: rt.jar:com/sun/org/apache/xalan/internal/utils/ObjectFactory.class */
+public class ObjectFactory {
+    private static final String JAXP_INTERNAL = "com.sun.org.apache";
+    private static final String STAX_INTERNAL = "com.sun.xml.internal";
+    private static final boolean DEBUG = false;
+
+    private static void debugPrintln(String msg) {
+    }
+
+    public static ClassLoader findClassLoader() {
+        if (System.getSecurityManager() != null) {
+            return null;
+        }
+        ClassLoader context = SecuritySupport.getContextClassLoader();
+        ClassLoader system = SecuritySupport.getSystemClassLoader();
+        ClassLoader parentClassLoader = system;
+        while (true) {
+            ClassLoader chain = parentClassLoader;
+            if (context == chain) {
+                ClassLoader current = ObjectFactory.class.getClassLoader();
+                ClassLoader parentClassLoader2 = system;
+                while (true) {
+                    ClassLoader chain2 = parentClassLoader2;
+                    if (current == chain2) {
+                        return system;
+                    }
+                    if (chain2 != null) {
+                        parentClassLoader2 = SecuritySupport.getParentClassLoader(chain2);
+                    } else {
+                        return current;
+                    }
+                }
+            } else if (chain != null) {
+                parentClassLoader = SecuritySupport.getParentClassLoader(chain);
+            } else {
+                return context;
+            }
+        }
+    }
+
+    public static Object newInstance(String className, boolean doFallback) throws ConfigurationError {
+        if (System.getSecurityManager() != null) {
+            return newInstance(className, null, doFallback);
+        }
+        return newInstance(className, findClassLoader(), doFallback);
+    }
+
+    static Object newInstance(String className, ClassLoader cl, boolean doFallback) throws ConfigurationError {
+        try {
+            Class providerClass = findProviderClass(className, cl, doFallback);
+            Object instance = providerClass.newInstance();
+            return instance;
+        } catch (ClassNotFoundException x2) {
+            throw new ConfigurationError("Provider " + className + " not found", x2);
+        } catch (Exception x3) {
+            throw new ConfigurationError("Provider " + className + " could not be instantiated: " + ((Object) x3), x3);
+        }
+    }
+
+    public static Class<?> findProviderClass(String className, boolean doFallback) throws ClassNotFoundException, ConfigurationError {
+        return findProviderClass(className, findClassLoader(), doFallback);
+    }
+
+    private static Class<?> findProviderClass(String className, ClassLoader cl, boolean doFallback) throws ClassNotFoundException, ConfigurationError {
+        Class<?> providerClass;
+        SecurityManager security = System.getSecurityManager();
+        if (security != null) {
+            try {
+                if (className.startsWith(JAXP_INTERNAL) || className.startsWith(STAX_INTERNAL)) {
+                    cl = null;
+                } else {
+                    int lastDot = className.lastIndexOf(".");
+                    String packageName = className;
+                    if (lastDot != -1) {
+                        packageName = className.substring(0, lastDot);
+                    }
+                    security.checkPackageAccess(packageName);
+                }
+            } catch (SecurityException e2) {
+                throw e2;
+            }
+        }
+        if (cl == null) {
+            providerClass = Class.forName(className, false, ObjectFactory.class.getClassLoader());
+        } else {
+            try {
+                providerClass = cl.loadClass(className);
+            } catch (ClassNotFoundException x2) {
+                if (doFallback) {
+                    ClassLoader current = ObjectFactory.class.getClassLoader();
+                    if (current == null) {
+                        providerClass = Class.forName(className);
+                    } else if (cl != current) {
+                        providerClass = current.loadClass(className);
+                    } else {
+                        throw x2;
+                    }
+                } else {
+                    throw x2;
+                }
+            }
+        }
+        return providerClass;
+    }
+}

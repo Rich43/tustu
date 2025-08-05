@@ -1,0 +1,10 @@
+package java.nio.file;
+
+/* loaded from: rt.jar:java/nio/file/FileSystemLoopException.class */
+public class FileSystemLoopException extends FileSystemException {
+    private static final long serialVersionUID = 4843039591949217617L;
+
+    public FileSystemLoopException(String str) {
+        super(str);
+    }
+}

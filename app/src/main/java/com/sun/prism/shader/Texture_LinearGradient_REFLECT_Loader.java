@@ -1,0 +1,24 @@
+package com.sun.prism.shader;
+
+import com.sun.prism.ps.Shader;
+import com.sun.prism.ps.ShaderFactory;
+import java.io.InputStream;
+import java.util.HashMap;
+
+/* loaded from: jfxrt.jar:com/sun/prism/shader/Texture_LinearGradient_REFLECT_Loader.class */
+public class Texture_LinearGradient_REFLECT_Loader {
+    private Texture_LinearGradient_REFLECT_Loader() {
+    }
+
+    public static Shader loadShader(ShaderFactory factory, InputStream pixelShaderCode) {
+        HashMap<String, Integer> samplers = new HashMap<>();
+        samplers.put("maskInput", 0);
+        samplers.put("colors", 1);
+        HashMap<String, Integer> params = new HashMap<>();
+        params.put("perspVec", 14);
+        params.put("gradParams", 13);
+        params.put("offset", 12);
+        params.put("fractions", 0);
+        return factory.createShader(pixelShaderCode, samplers, params, 0, true, true);
+    }
+}

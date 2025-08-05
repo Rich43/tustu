@@ -1,0 +1,118 @@
+package org.apache.commons.math3.distribution;
+
+import org.apache.commons.math3.exception.NotStrictlyPositiveException;
+import org.apache.commons.math3.exception.OutOfRangeException;
+import org.apache.commons.math3.exception.util.LocalizedFormats;
+import org.apache.commons.math3.random.RandomGenerator;
+import org.apache.commons.math3.random.Well19937c;
+import org.apache.commons.math3.util.FastMath;
+
+/* loaded from: commons-math3-3.6.1.jar:org/apache/commons/math3/distribution/CauchyDistribution.class */
+public class CauchyDistribution extends AbstractRealDistribution {
+    public static final double DEFAULT_INVERSE_ABSOLUTE_ACCURACY = 1.0E-9d;
+    private static final long serialVersionUID = 8589540077390120676L;
+    private final double median;
+    private final double scale;
+    private final double solverAbsoluteAccuracy;
+
+    public CauchyDistribution() {
+        this(0.0d, 1.0d);
+    }
+
+    public CauchyDistribution(double median, double scale) {
+        this(median, scale, 1.0E-9d);
+    }
+
+    public CauchyDistribution(double median, double scale, double inverseCumAccuracy) {
+        this(new Well19937c(), median, scale, inverseCumAccuracy);
+    }
+
+    public CauchyDistribution(RandomGenerator rng, double median, double scale) {
+        this(rng, median, scale, 1.0E-9d);
+    }
+
+    public CauchyDistribution(RandomGenerator rng, double median, double scale, double inverseCumAccuracy) {
+        super(rng);
+        if (scale <= 0.0d) {
+            throw new NotStrictlyPositiveException(LocalizedFormats.SCALE, Double.valueOf(scale));
+        }
+        this.scale = scale;
+        this.median = median;
+        this.solverAbsoluteAccuracy = inverseCumAccuracy;
+    }
+
+    @Override // org.apache.commons.math3.distribution.RealDistribution
+    public double cumulativeProbability(double x2) {
+        return 0.5d + (FastMath.atan((x2 - this.median) / this.scale) / 3.141592653589793d);
+    }
+
+    public double getMedian() {
+        return this.median;
+    }
+
+    public double getScale() {
+        return this.scale;
+    }
+
+    @Override // org.apache.commons.math3.distribution.RealDistribution
+    public double density(double x2) {
+        double dev = x2 - this.median;
+        return 0.3183098861837907d * (this.scale / ((dev * dev) + (this.scale * this.scale)));
+    }
+
+    @Override // org.apache.commons.math3.distribution.AbstractRealDistribution, org.apache.commons.math3.distribution.RealDistribution
+    public double inverseCumulativeProbability(double p2) throws OutOfRangeException {
+        double ret;
+        if (p2 < 0.0d || p2 > 1.0d) {
+            throw new OutOfRangeException(Double.valueOf(p2), 0, 1);
+        }
+        if (p2 == 0.0d) {
+            ret = Double.NEGATIVE_INFINITY;
+        } else if (p2 == 1.0d) {
+            ret = Double.POSITIVE_INFINITY;
+        } else {
+            ret = this.median + (this.scale * FastMath.tan(3.141592653589793d * (p2 - 0.5d)));
+        }
+        return ret;
+    }
+
+    @Override // org.apache.commons.math3.distribution.AbstractRealDistribution
+    protected double getSolverAbsoluteAccuracy() {
+        return this.solverAbsoluteAccuracy;
+    }
+
+    @Override // org.apache.commons.math3.distribution.RealDistribution
+    public double getNumericalMean() {
+        return Double.NaN;
+    }
+
+    @Override // org.apache.commons.math3.distribution.RealDistribution
+    public double getNumericalVariance() {
+        return Double.NaN;
+    }
+
+    @Override // org.apache.commons.math3.distribution.RealDistribution
+    public double getSupportLowerBound() {
+        return Double.NEGATIVE_INFINITY;
+    }
+
+    @Override // org.apache.commons.math3.distribution.RealDistribution
+    public double getSupportUpperBound() {
+        return Double.POSITIVE_INFINITY;
+    }
+
+    @Override // org.apache.commons.math3.distribution.RealDistribution
+    public boolean isSupportLowerBoundInclusive() {
+        return false;
+    }
+
+    @Override // org.apache.commons.math3.distribution.RealDistribution
+    public boolean isSupportUpperBoundInclusive() {
+        return false;
+    }
+
+    @Override // org.apache.commons.math3.distribution.RealDistribution
+    public boolean isSupportConnected() {
+        return true;
+    }
+}

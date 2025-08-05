@@ -1,0 +1,12 @@
+package sun.text.resources.cldr.pa;
+
+import java.util.ListResourceBundle;
+
+/* loaded from: cldrdata.jar:sun/text/resources/cldr/pa/FormatData_pa.class */
+public class FormatData_pa extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"MonthNames", new String[]{"ਜਨਵਰੀ", "ਫ਼ਰਵਰੀ", "ਮਾਰਚ", "ਅਪ੍ਰੈਲ", "ਮਈ", "ਜੂਨ", "ਜੁਲਾਈ", "ਅਗਸਤ", "ਸਤੰਬਰ", "ਅਕਤੂਬਰ", "ਨਵੰਬਰ", "ਦਸੰਬਰ", ""}}, new Object[]{"standalone.MonthNames", new String[]{"ਜਨਵਰੀ", "ਫ਼ਰਵਰੀ", "ਮਾਰਚ", "ਅਪ੍ਰੈਲ", "ਮਈ", "ਜੂਨ", "ਜੁਲਾਈ", "ਅਗਸਤ", "ਸਤੰਬਰ", "ਅਕਤੂਬਰ", "ਨਵੰਬਰ", "ਦਸੰਬਰ", ""}}, new Object[]{"MonthAbbreviations", new String[]{"", "", "", "", "ਮਈ", "", "", "", "", "", "", "", ""}}, new Object[]{"standalone.MonthAbbreviations", new String[]{"", "", "", "", "ਮਈ", "", "", "", "", "", "", "", ""}}, new Object[]{"MonthNarrows", new String[]{"ਜ", "ਫ", "ਮਾ", "ਅ", "ਮ", "ਜੂ", "ਜੁ", "ਅ", "ਸ", "ਅ", "ਨ", "ਦ", ""}}, new Object[]{"DayNames", new String[]{"ਐਤਵਾਰ", "ਸੋਮਵਾਰ", "ਮੰਗਲਵਾਰ", "ਬੁਧਵਾਰ", "ਵੀਰਵਾਰ", "ਸ਼ੁੱਕਰਵਾਰ", "ਸ਼ਨੀਚਰਵਾਰ"}}, new Object[]{"standalone.DayNames", new String[]{"ਐਤਵਾਰ", "ਸੋਮਵਾਰ", "ਮੰਗਲਵਾਰ", "ਬੁਧਵਾਰ", "ਵੀਰਵਾਰ", "ਸ਼ੁੱਕਰਵਾਰ", "ਸ਼ਨੀਚਰਵਾਰ"}}, new Object[]{"DayAbbreviations", new String[]{"ਐਤ.", "ਸੋਮ.", "ਮੰਗਲ.", "ਬੁਧ.", "ਵੀਰ.", "ਸ਼ੁਕਰ.", "ਸ਼ਨੀ."}}, new Object[]{"DayNarrows", new String[]{"ਐ", "ਸੋ", "ਮੰ", "ਬੁੱ", "ਵੀ", "ਸ਼ੁੱ", "ਸ਼"}}, new Object[]{"QuarterNames", new String[]{"ਇਕ ਚੌਥਾਈ", "ਅੱਧਾ", "ਪੌਣਾ", "ਪੂਰਾ"}}, new Object[]{"standalone.QuarterNames", new String[]{"ਇਕ ਚੌਥਾਈ", "ਅੱਧਾ", "ਪੌਣਾ", "ਪੂਰਾ"}}, new Object[]{"AmPmMarkers", new String[]{"ਪੂਰਵ ਦੁਪਹਿਰ", "ਬਾਅਦ ਦੁਪਹਿਰ"}}, new Object[]{"Eras", new String[]{"ਈ. ਪੂ.", "ਸਾਲ"}}, new Object[]{"field.era", "ਯੁੱਗ"}, new Object[]{"field.year", "ਸਾਲ"}, new Object[]{"field.month", "ਮਹੀਨਾ"}, new Object[]{"field.week", "ਹਫ਼ਤਾ"}, new Object[]{"field.weekday", "ਹਫ਼ਤੇ ਦਾ ਦਿਨ"}, new Object[]{"field.hour", "ਘੰਟਾ"}, new Object[]{"field.minute", "ਮਿੰਟ"}, new Object[]{"field.second", "ਸਕਿੰਡ"}, new Object[]{"field.zone", "ਖੇਤਰ"}, new Object[]{"TimePatterns", new String[]{"h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"}}, new Object[]{"DatePatterns", new String[]{"EEEE, dd MMMM y", "d MMMM y", "d MMM y", "dd/MM/yyyy"}}, new Object[]{"DefaultNumberingSystem", "latn"}, new Object[]{"NumberPatterns", new String[]{"#,##,##0.###", "¤ #,##,##0.00", "#,##,##0%"}}};
+    }
+}

@@ -1,0 +1,14 @@
+package sun.text.resources.cldr.sw;
+
+import com.sun.glass.ui.Platform;
+import java.util.ListResourceBundle;
+import org.icepdf.core.util.PdfOps;
+
+/* loaded from: cldrdata.jar:sun/text/resources/cldr/sw/FormatData_sw.class */
+public class FormatData_sw extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"MonthNames", new String[]{"Januari", "Februari", "Machi", "Aprili", "Mei", "Juni", "Julai", "Agosti", "Septemba", "Oktoba", "Novemba", "Desemba", ""}}, new Object[]{"MonthAbbreviations", new String[]{"Jan", "Feb", Platform.MAC, "Apr", "Mei", "Jun", "Jul", "Ago", "Sep", "Okt", "Nov", "Des", ""}}, new Object[]{"MonthNarrows", new String[]{"J", PdfOps.F_TOKEN, PdfOps.M_TOKEN, "A", PdfOps.M_TOKEN, "J", "J", "A", PdfOps.S_TOKEN, "O", "N", PdfOps.D_TOKEN, ""}}, new Object[]{"DayNames", new String[]{"Jumapili", "Jumatatu", "Jumanne", "Jumatano", "Alhamisi", "Ijumaa", "Jumamosi"}}, new Object[]{"DayAbbreviations", new String[]{"J2", "J3", "J4", "J5", "Alh", "Ij", "J1"}}, new Object[]{"DayNarrows", new String[]{"2", "3", "4", "5", "A", "I", "1"}}, new Object[]{"QuarterNames", new String[]{"Robo 1", "Robo 2", "Robo 3", "Robo 4"}}, new Object[]{"QuarterAbbreviations", new String[]{"R1", "R2", "R3", "R4"}}, new Object[]{"QuarterNarrows", new String[]{"1", "2", "3", "4"}}, new Object[]{"AmPmMarkers", new String[]{"asubuhi", "alasiri"}}, new Object[]{"long.Eras", new String[]{"Kabla ya Kristo", "Baada ya Kristo"}}, new Object[]{"Eras", new String[]{"KK", "BK"}}, new Object[]{"field.era", "Enzi"}, new Object[]{"field.year", "Mwaka"}, new Object[]{"field.month", "Mwezi"}, new Object[]{"field.week", "Wiki"}, new Object[]{"field.weekday", "Siku ya wiki"}, new Object[]{"field.dayperiod", "Muda wa siku"}, new Object[]{"field.hour", "Saa"}, new Object[]{"field.minute", "Dakika"}, new Object[]{"field.second", "Sekunde"}, new Object[]{"field.zone", "Majira ya saa"}, new Object[]{"TimePatterns", new String[]{"h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"}}, new Object[]{"DatePatterns", new String[]{"EEEE, d MMMM y", "d MMMM y", "d MMM y", "dd/MM/yyyy"}}, new Object[]{"calendarname.islamic-civil", "Kalenda ya Kiislamu/Rasmi"}, new Object[]{"calendarname.islamicc", "Kalenda ya Kiislamu/Rasmi"}, new Object[]{"calendarname.gregorian", "Kalenda ya Kigregori"}, new Object[]{"calendarname.gregory", "Kalenda ya Kigregori"}, new Object[]{"calendarname.japanese", "Kalenda ya Kijapani"}, new Object[]{"calendarname.buddhist", "Kalenda ya Kibuddha"}, new Object[]{"calendarname.islamic", "Kalenda ya Kiislamu"}, new Object[]{"calendarname.roc", "Kalenda ya Minguo"}, new Object[]{"NumberPatterns", new String[]{"#,##0.###", "#,##0.00 ¤", "#,##0%"}}};
+    }
+}

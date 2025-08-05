@@ -1,0 +1,98 @@
+package org.omg.CORBA.portable;
+
+import java.io.IOException;
+import java.math.BigDecimal;
+import org.omg.CORBA.Any;
+import org.omg.CORBA.Context;
+import org.omg.CORBA.NO_IMPLEMENT;
+import org.omg.CORBA.ORB;
+import org.omg.CORBA.Object;
+import org.omg.CORBA.Principal;
+import org.omg.CORBA.TypeCode;
+
+/* loaded from: rt.jar:org/omg/CORBA/portable/InputStream.class */
+public abstract class InputStream extends java.io.InputStream {
+    public abstract boolean read_boolean();
+
+    public abstract char read_char();
+
+    public abstract char read_wchar();
+
+    public abstract byte read_octet();
+
+    public abstract short read_short();
+
+    public abstract short read_ushort();
+
+    public abstract int read_long();
+
+    public abstract int read_ulong();
+
+    public abstract long read_longlong();
+
+    public abstract long read_ulonglong();
+
+    public abstract float read_float();
+
+    public abstract double read_double();
+
+    public abstract String read_string();
+
+    public abstract String read_wstring();
+
+    public abstract void read_boolean_array(boolean[] zArr, int i2, int i3);
+
+    public abstract void read_char_array(char[] cArr, int i2, int i3);
+
+    public abstract void read_wchar_array(char[] cArr, int i2, int i3);
+
+    public abstract void read_octet_array(byte[] bArr, int i2, int i3);
+
+    public abstract void read_short_array(short[] sArr, int i2, int i3);
+
+    public abstract void read_ushort_array(short[] sArr, int i2, int i3);
+
+    public abstract void read_long_array(int[] iArr, int i2, int i3);
+
+    public abstract void read_ulong_array(int[] iArr, int i2, int i3);
+
+    public abstract void read_longlong_array(long[] jArr, int i2, int i3);
+
+    public abstract void read_ulonglong_array(long[] jArr, int i2, int i3);
+
+    public abstract void read_float_array(float[] fArr, int i2, int i3);
+
+    public abstract void read_double_array(double[] dArr, int i2, int i3);
+
+    public abstract Object read_Object();
+
+    public abstract TypeCode read_TypeCode();
+
+    public abstract Any read_any();
+
+    @Deprecated
+    public Principal read_Principal() {
+        throw new NO_IMPLEMENT();
+    }
+
+    @Override // java.io.InputStream
+    public int read() throws IOException {
+        throw new NO_IMPLEMENT();
+    }
+
+    public BigDecimal read_fixed() {
+        throw new NO_IMPLEMENT();
+    }
+
+    public Context read_Context() {
+        throw new NO_IMPLEMENT();
+    }
+
+    public Object read_Object(Class cls) {
+        throw new NO_IMPLEMENT();
+    }
+
+    public ORB orb() {
+        throw new NO_IMPLEMENT();
+    }
+}

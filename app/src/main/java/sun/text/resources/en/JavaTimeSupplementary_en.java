@@ -1,0 +1,12 @@
+package sun.text.resources.en;
+
+import sun.util.resources.OpenListResourceBundle;
+
+/* loaded from: rt.jar:sun/text/resources/en/JavaTimeSupplementary_en.class */
+public class JavaTimeSupplementary_en extends OpenListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"QuarterAbbreviations", new String[]{"Q1", "Q2", "Q3", "Q4"}}, new Object[]{"QuarterNames", new String[]{"1st quarter", "2nd quarter", "3rd quarter", "4th quarter"}}, new Object[]{"calendarname.buddhist", "Buddhist Calendar"}, new Object[]{"calendarname.gregorian", "Gregorian Calendar"}, new Object[]{"calendarname.gregory", "Gregorian Calendar"}, new Object[]{"calendarname.islamic", "Islamic Calendar"}, new Object[]{"calendarname.islamic-civil", "Islamic-Civil Calendar"}, new Object[]{"calendarname.islamicc", "Islamic-Civil Calendar"}, new Object[]{"calendarname.japanese", "Japanese Calendar"}, new Object[]{"calendarname.roc", "Minguo Calendar"}, new Object[]{"field.dayperiod", "AM/PM"}, new Object[]{"field.era", "Era"}, new Object[]{"field.hour", "Hour"}, new Object[]{"field.minute", "Minute"}, new Object[]{"field.month", "Month"}, new Object[]{"field.second", "Second"}, new Object[]{"field.week", "Week"}, new Object[]{"field.weekday", "Day of the Week"}, new Object[]{"field.year", "Year"}, new Object[]{"field.zone", "Time Zone"}, new Object[]{"islamic.DatePatterns", new String[]{"EEEE, MMMM d, y GGGG", "MMMM d, y GGGG", "MMM d, y GGGG", "M/d/yy GGGG"}}, new Object[]{"java.time.buddhist.DatePatterns", new String[]{"EEEE, MMMM d, y G", "MMMM d, y G", "MMM d, y G", "M/d/yy GGGGG"}}, new Object[]{"java.time.islamic.DatePatterns", new String[]{"EEEE, MMMM d, y G", "MMMM d, y G", "MMM d, y G", "M/d/yy G"}}, new Object[]{"java.time.japanese.DatePatterns", new String[]{"EEEE, MMMM d, y G", "MMMM d, y G", "MMM d, y G", "M/d/yy GGGGG"}}, new Object[]{"java.time.long.Eras", new String[]{"Before Christ", "Anno Domini"}}, new Object[]{"java.time.roc.DatePatterns", new String[]{"EEEE, MMMM d, y G", "MMMM d, y G", "MMM d, y G", "M/d/yy GGGGG"}}, new Object[]{"java.time.short.Eras", new String[]{"BC", "AD"}}, new Object[]{"roc.DatePatterns", new String[]{"EEEE, MMMM d, y GGGG", "MMMM d, y GGGG", "MMM d, y GGGG", "M/d/yy G"}}};
+    }
+}

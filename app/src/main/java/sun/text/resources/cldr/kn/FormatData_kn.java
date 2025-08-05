@@ -1,0 +1,14 @@
+package sun.text.resources.cldr.kn;
+
+import java.util.ListResourceBundle;
+import javafx.fxml.FXMLLoader;
+import sun.util.locale.LanguageTag;
+
+/* loaded from: cldrdata.jar:sun/text/resources/cldr/kn/FormatData_kn.class */
+public class FormatData_kn extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"MonthNames", new String[]{"ಜನವರೀ", "ಫೆಬ್ರವರೀ", "ಮಾರ್ಚ್", "ಎಪ್ರಿಲ್", "ಮೆ", "ಜೂನ್", "ಜುಲೈ", "ಆಗಸ್ಟ್", "ಸಪ್ಟೆಂಬರ್", "ಅಕ್ಟೋಬರ್", "ನವೆಂಬರ್", "ಡಿಸೆಂಬರ್", ""}}, new Object[]{"MonthNarrows", new String[]{"ಜ", "ಫೆ", "ಮಾ", "ಎ", "ಮೇ", "ಜೂ", "ಜು", "ಆ", "ಸೆ", "ಅ", "ನ", "ಡಿ", ""}}, new Object[]{"DayNames", new String[]{"ರವಿವಾರ", "ಸೋಮವಾರ", "ಮಂಗಳವಾರ", "ಬುಧವಾರ", "ಗುರುವಾರ", "ಶುಕ್ರವಾರ", "ಶನಿವಾರ"}}, new Object[]{"DayAbbreviations", new String[]{"ರ.", "ಸೋ.", "ಮಂ.", "ಬು.", "ಗು.", "ಶು.", "ಶನಿ."}}, new Object[]{"DayNarrows", new String[]{"ರ", "ಸೋ", "ಮಂ", "ಬು", "ಗು", "ಶು", "ಶ"}}, new Object[]{"QuarterNames", new String[]{"ಒಂದು 1", "ಎರಡು 2", "ಮೂರು 3", "ನಾಲೃಕ 4"}}, new Object[]{"QuarterNarrows", new String[]{"1", "2", "3", "4"}}, new Object[]{"narrow.AmPmMarkers", new String[]{"ಪೂರ್ವಾಹ್ನ", "ಅಪ."}}, new Object[]{"long.Eras", new String[]{"ಈಸಪೂವ೯.", "ಕ್ರಿಸ್ತ ಶಕ"}}, new Object[]{"Eras", new String[]{"ಕ್ರಿ.ಪೂ", "ಜಾಹೀ"}}, new Object[]{"field.era", "ಯುಗ"}, new Object[]{"field.year", "ವರ್ಷ"}, new Object[]{"field.month", "ತಿಂಗಳು"}, new Object[]{"field.week", "ವಾರ"}, new Object[]{"field.weekday", "ವಾರದ ದಿನ"}, new Object[]{"field.dayperiod", "ಪೂರ್ವಾಹ್ನ/ಅಪರಾಹ್ನ"}, new Object[]{"field.hour", "ಗಂಟೆ"}, new Object[]{"field.minute", "ನಿಮಿಷ"}, new Object[]{"field.second", "ಸೆಕೆಂಡ್"}, new Object[]{"field.zone", "ಸಮಯ ವಲಯ:"}, new Object[]{"TimePatterns", new String[]{"hh:mm:ss a zzzz", "hh:mm:ss a z", "hh:mm:ss a", "hh:mm a"}}, new Object[]{"DatePatterns", new String[]{"EEEE d MMMM y", "d MMMM y", "d MMM y", "d-M-yy"}}, new Object[]{"calendarname.islamic-civil", "ಇಸ್ಲಾಮಿಕ್\u200c\u200c-ನಾಗರಿಕ ಕ್ಯಾಲೆಂಡರ್\u200c"}, new Object[]{"calendarname.islamicc", "ಇಸ್ಲಾಮಿಕ್\u200c\u200c-ನಾಗರಿಕ ಕ್ಯಾಲೆಂಡರ್\u200c"}, new Object[]{"calendarname.buddhist", "ಬೌದ್ಧ ಕ್ಯಾಲೆಂಡರ್\u200c"}, new Object[]{"calendarname.islamic", "ಇಸ್ಲಾಮಿಕ್\u200c ಕ್ಯಾಲೆಂಡರ್\u200c"}, new Object[]{"calendarname.gregorian", "ಗ್ರೆಗೊರಿಯನ್\u200c ಕ್ಯಾಲೆಂಡರ್\u200c"}, new Object[]{"calendarname.gregory", "ಗ್ರೆಗೊರಿಯನ್\u200c ಕ್ಯಾಲೆಂಡರ್\u200c"}, new Object[]{"calendarname.roc", "ಮಿಂಗ್ವೋ ಕ್ಯಾಲೆಂಡರ್\u200c"}, new Object[]{"calendarname.japanese", "ಜಪಾನಿ ಕ್ಯಾಲೆಂಡರ್\u200c"}, new Object[]{"DefaultNumberingSystem", "latn"}, new Object[]{"latn.NumberElements", new String[]{".", ",", ";", FXMLLoader.RESOURCE_KEY_PREFIX, "0", FXMLLoader.CONTROLLER_METHOD_PREFIX, LanguageTag.SEP, "ಪೂರ್ವ", "‰", "∞", "ಸಂಖ್ಯೆಯಲ್ಲ"}}, new Object[]{"NumberPatterns", new String[]{"#,##,##0.###", "¤ #,##,##0.00", "#,##,##0%"}}};
+    }
+}

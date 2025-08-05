@@ -1,0 +1,119 @@
+package com.sun.org.apache.xerces.internal.util;
+
+import com.sun.org.apache.xerces.internal.xni.Augmentations;
+import com.sun.org.apache.xerces.internal.xni.NamespaceContext;
+import com.sun.org.apache.xerces.internal.xni.QName;
+import com.sun.org.apache.xerces.internal.xni.XMLAttributes;
+import com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
+import com.sun.org.apache.xerces.internal.xni.XMLLocator;
+import com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier;
+import com.sun.org.apache.xerces.internal.xni.XMLString;
+import com.sun.org.apache.xerces.internal.xni.XNIException;
+import com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentFilter;
+import com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
+
+/* loaded from: rt.jar:com/sun/org/apache/xerces/internal/util/XMLDocumentFilterImpl.class */
+public class XMLDocumentFilterImpl implements XMLDocumentFilter {
+    private XMLDocumentHandler next;
+    private XMLDocumentSource source;
+
+    @Override // com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource
+    public void setDocumentHandler(XMLDocumentHandler handler) {
+        this.next = handler;
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource
+    public XMLDocumentHandler getDocumentHandler() {
+        return this.next;
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void setDocumentSource(XMLDocumentSource source) {
+        this.source = source;
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public XMLDocumentSource getDocumentSource() {
+        return this.source;
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void characters(XMLString text, Augmentations augs) throws XNIException {
+        this.next.characters(text, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void comment(XMLString text, Augmentations augs) throws XNIException {
+        this.next.comment(text, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void doctypeDecl(String rootElement, String publicId, String systemId, Augmentations augs) throws XNIException {
+        this.next.doctypeDecl(rootElement, publicId, systemId, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void emptyElement(QName element, XMLAttributes attributes, Augmentations augs) throws XNIException {
+        this.next.emptyElement(element, attributes, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void endCDATA(Augmentations augs) throws XNIException {
+        this.next.endCDATA(augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void endDocument(Augmentations augs) throws XNIException {
+        this.next.endDocument(augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void endElement(QName element, Augmentations augs) throws XNIException {
+        this.next.endElement(element, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void endGeneralEntity(String name, Augmentations augs) throws XNIException {
+        this.next.endGeneralEntity(name, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void ignorableWhitespace(XMLString text, Augmentations augs) throws XNIException {
+        this.next.ignorableWhitespace(text, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void processingInstruction(String target, XMLString data, Augmentations augs) throws XNIException {
+        this.next.processingInstruction(target, data, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void startCDATA(Augmentations augs) throws XNIException {
+        this.next.startCDATA(augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void startDocument(XMLLocator locator, String encoding, NamespaceContext namespaceContext, Augmentations augs) throws XNIException {
+        this.next.startDocument(locator, encoding, namespaceContext, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void startElement(QName element, XMLAttributes attributes, Augmentations augs) throws XNIException {
+        this.next.startElement(element, attributes, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void startGeneralEntity(String name, XMLResourceIdentifier identifier, String encoding, Augmentations augs) throws XNIException {
+        this.next.startGeneralEntity(name, identifier, encoding, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void textDecl(String version, String encoding, Augmentations augs) throws XNIException {
+        this.next.textDecl(version, encoding, augs);
+    }
+
+    @Override // com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
+    public void xmlDecl(String version, String encoding, String standalone, Augmentations augs) throws XNIException {
+        this.next.xmlDecl(version, encoding, standalone, augs);
+    }
+}

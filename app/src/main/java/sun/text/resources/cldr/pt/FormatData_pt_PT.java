@@ -1,0 +1,14 @@
+package sun.text.resources.cldr.pt;
+
+import java.util.ListResourceBundle;
+import javafx.fxml.FXMLLoader;
+import sun.util.locale.LanguageTag;
+
+/* loaded from: cldrdata.jar:sun/text/resources/cldr/pt/FormatData_pt_PT.class */
+public class FormatData_pt_PT extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"MonthNames", new String[]{"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro", ""}}, new Object[]{"MonthAbbreviations", new String[]{"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez", ""}}, new Object[]{"DayNames", new String[]{"Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"}}, new Object[]{"QuarterNames", new String[]{"1.º trimestre", "2.º trimestre", "3.º trimestre", "4.º trimestre"}}, new Object[]{"AmPmMarkers", new String[]{"a.m.", "p.m."}}, new Object[]{"narrow.AmPmMarkers", new String[]{"a.m.", "p.m."}}, new Object[]{"TimePatterns", new String[]{"H:mm:ss zzzz", "H:mm:ss z", "HH:mm:ss", "HH:mm"}}, new Object[]{"java.time.buddhist.DatePatterns", new String[]{"EEEE, d 'de' MMMM 'de' y G", "d 'de' MMMM 'de' y G", "dd/MM/yyyy G", "d/M/y G"}}, new Object[]{"buddhist.DatePatterns", new String[]{"EEEE, d 'de' MMMM 'de' y GGGG", "d 'de' MMMM 'de' y GGGG", "dd/MM/yyyy GGGG", "d/M/y GGGG"}}, new Object[]{"java.time.japanese.DatePatterns", new String[]{"EEEE, d 'de' MMMM 'de' y G", "d 'de' MMMM 'de' y G", "dd/MM/yyyy G", "d/M/y G"}}, new Object[]{"japanese.DatePatterns", new String[]{"EEEE, d 'de' MMMM 'de' y GGGG", "d 'de' MMMM 'de' y GGGG", "dd/MM/yyyy GGGG", "d/M/y GGGG"}}, new Object[]{"java.time.roc.DatePatterns", new String[]{"EEEE, d 'de' MMMM 'de' y G", "d 'de' MMMM 'de' y G", "dd/MM/yyyy G", "d/M/y G"}}, new Object[]{"roc.DatePatterns", new String[]{"EEEE, d 'de' MMMM 'de' y GGGG", "d 'de' MMMM 'de' y GGGG", "dd/MM/yyyy GGGG", "d/M/y GGGG"}}, new Object[]{"java.time.islamic.DatePatterns", new String[]{"EEEE, d 'de' MMMM 'de' y G", "d 'de' MMMM 'de' y G", "dd/MM/yyyy G", "d/M/y G"}}, new Object[]{"islamic.DatePatterns", new String[]{"EEEE, d 'de' MMMM 'de' y GGGG", "d 'de' MMMM 'de' y GGGG", "dd/MM/yyyy GGGG", "d/M/y GGGG"}}, new Object[]{"calendarname.islamic-civil", "Calendário Islâmico/Civil"}, new Object[]{"calendarname.islamicc", "Calendário Islâmico/Civil"}, new Object[]{"DefaultNumberingSystem", "latn"}, new Object[]{"latn.NumberElements", new String[]{FXMLLoader.EXPRESSION_PREFIX, ",", ";", FXMLLoader.RESOURCE_KEY_PREFIX, "0", FXMLLoader.CONTROLLER_METHOD_PREFIX, LanguageTag.SEP, "E", "‰", "∞", "NaN"}}, new Object[]{"NumberPatterns", new String[]{"#,##0.###", "#,##0.00 ¤", "#,##0%"}}};
+    }
+}

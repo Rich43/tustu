@@ -1,0 +1,50 @@
+package com.sun.crypto.provider;
+
+import java.util.Arrays;
+import javax.crypto.ShortBufferException;
+
+/* loaded from: sunjce_provider.jar:com/sun/crypto/provider/PKCS5Padding.class */
+final class PKCS5Padding implements Padding {
+    private int blockSize;
+
+    PKCS5Padding(int i2) {
+        this.blockSize = i2;
+    }
+
+    @Override // com.sun.crypto.provider.Padding
+    public void padWithLen(byte[] bArr, int i2, int i3) throws ShortBufferException {
+        if (bArr == null) {
+            return;
+        }
+        int iAddExact = Math.addExact(i2, i3);
+        if (iAddExact > bArr.length) {
+            throw new ShortBufferException("Buffer too small to hold padding");
+        }
+        Arrays.fill(bArr, i2, iAddExact, (byte) (i3 & 255));
+    }
+
+    @Override // com.sun.crypto.provider.Padding
+    public int unpad(byte[] bArr, int i2, int i3) {
+        int i4;
+        if (bArr == null || i3 == 0) {
+            return 0;
+        }
+        int iAddExact = Math.addExact(i2, i3);
+        byte b2 = bArr[iAddExact - 1];
+        int i5 = b2 & 255;
+        if (i5 < 1 || i5 > this.blockSize || (i4 = iAddExact - i5) < i2) {
+            return -1;
+        }
+        for (int i6 = i4; i6 < iAddExact; i6++) {
+            if (bArr[i6] != b2) {
+                return -1;
+            }
+        }
+        return i4;
+    }
+
+    @Override // com.sun.crypto.provider.Padding
+    public int padLength(int i2) {
+        return this.blockSize - (i2 % this.blockSize);
+    }
+}

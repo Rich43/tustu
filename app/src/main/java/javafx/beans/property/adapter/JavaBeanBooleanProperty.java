@@ -1,0 +1,148 @@
+package javafx.beans.property.adapter;
+
+import com.sun.javafx.binding.ExpressionHelper;
+import com.sun.javafx.property.adapter.Disposer;
+import com.sun.javafx.property.adapter.PropertyDescriptor;
+import com.sun.javafx.property.adapter.PropertyDescriptor.Listener;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.UndeclaredThrowableException;
+import java.security.AccessControlContext;
+import java.security.AccessController;
+import javafx.beans.InvalidationListener;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import sun.reflect.misc.MethodUtil;
+
+/* loaded from: jfxrt.jar:javafx/beans/property/adapter/JavaBeanBooleanProperty.class */
+public final class JavaBeanBooleanProperty extends BooleanProperty implements JavaBeanProperty<Boolean> {
+    private final PropertyDescriptor descriptor;
+    private final PropertyDescriptor.Listener<Boolean> listener;
+    private ObservableValue<? extends Boolean> observable = null;
+    private ExpressionHelper<Boolean> helper = null;
+    private final AccessControlContext acc = AccessController.getContext();
+
+    JavaBeanBooleanProperty(PropertyDescriptor descriptor, Object bean) throws IllegalArgumentException {
+        this.descriptor = descriptor;
+        descriptor.getClass();
+        this.listener = descriptor.new Listener<>(bean, this);
+        descriptor.addListener(this.listener);
+        Disposer.addRecord(this, new DescriptorListenerCleaner(descriptor, this.listener));
+    }
+
+    @Override // javafx.beans.value.ObservableBooleanValue
+    public boolean get() {
+        return ((Boolean) AccessController.doPrivileged(() -> {
+            try {
+                return (Boolean) MethodUtil.invoke(this.descriptor.getGetter(), getBean(), (Object[]) null);
+            } catch (IllegalAccessException e2) {
+                throw new UndeclaredThrowableException(e2);
+            } catch (InvocationTargetException e3) {
+                throw new UndeclaredThrowableException(e3);
+            }
+        }, this.acc)).booleanValue();
+    }
+
+    @Override // javafx.beans.value.WritableBooleanValue
+    public void set(boolean value) {
+        if (isBound()) {
+            throw new RuntimeException("A bound value cannot be set.");
+        }
+        AccessController.doPrivileged(() -> {
+            try {
+                MethodUtil.invoke(this.descriptor.getSetter(), getBean(), new Object[]{Boolean.valueOf(value)});
+                ExpressionHelper.fireValueChangedEvent(this.helper);
+                return null;
+            } catch (IllegalAccessException e2) {
+                throw new UndeclaredThrowableException(e2);
+            } catch (InvocationTargetException e3) {
+                throw new UndeclaredThrowableException(e3);
+            }
+        }, this.acc);
+    }
+
+    @Override // javafx.beans.property.Property
+    public void bind(ObservableValue<? extends Boolean> observable) {
+        if (observable == null) {
+            throw new NullPointerException("Cannot bind to null");
+        }
+        if (!observable.equals(this.observable)) {
+            unbind();
+            set(observable.getValue2().booleanValue());
+            this.observable = observable;
+            this.observable.addListener(this.listener);
+        }
+    }
+
+    @Override // javafx.beans.property.Property
+    public void unbind() {
+        if (this.observable != null) {
+            this.observable.removeListener(this.listener);
+            this.observable = null;
+        }
+    }
+
+    @Override // javafx.beans.property.Property
+    public boolean isBound() {
+        return this.observable != null;
+    }
+
+    @Override // javafx.beans.property.ReadOnlyProperty
+    public Object getBean() {
+        return this.listener.getBean();
+    }
+
+    @Override // javafx.beans.property.ReadOnlyProperty
+    public String getName() {
+        return this.descriptor.getName();
+    }
+
+    @Override // javafx.beans.value.ObservableValue
+    public void addListener(ChangeListener<? super Boolean> listener) {
+        this.helper = ExpressionHelper.addListener(this.helper, this, listener);
+    }
+
+    @Override // javafx.beans.value.ObservableValue
+    public void removeListener(ChangeListener<? super Boolean> listener) {
+        this.helper = ExpressionHelper.removeListener(this.helper, listener);
+    }
+
+    @Override // javafx.beans.Observable
+    public void addListener(InvalidationListener listener) {
+        this.helper = ExpressionHelper.addListener(this.helper, this, listener);
+    }
+
+    @Override // javafx.beans.Observable
+    public void removeListener(InvalidationListener listener) {
+        this.helper = ExpressionHelper.removeListener(this.helper, listener);
+    }
+
+    @Override // javafx.beans.property.adapter.ReadOnlyJavaBeanProperty
+    public void fireValueChangedEvent() {
+        ExpressionHelper.fireValueChangedEvent(this.helper);
+    }
+
+    @Override // javafx.beans.property.adapter.ReadOnlyJavaBeanProperty
+    public void dispose() throws IllegalArgumentException {
+        this.descriptor.removeListener(this.listener);
+    }
+
+    @Override // javafx.beans.property.BooleanProperty, javafx.beans.property.ReadOnlyBooleanProperty
+    public String toString() {
+        Object bean = getBean();
+        String name = getName();
+        StringBuilder result = new StringBuilder("BooleanProperty [");
+        if (bean != null) {
+            result.append("bean: ").append(bean).append(", ");
+        }
+        if (name != null && !name.equals("")) {
+            result.append("name: ").append(name).append(", ");
+        }
+        if (isBound()) {
+            result.append("bound, ");
+        }
+        result.append("value: ").append(get());
+        result.append("]");
+        return result.toString();
+    }
+}

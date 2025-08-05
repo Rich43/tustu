@@ -1,0 +1,12 @@
+package sun.util.resources.cldr.nmg;
+
+import sun.util.resources.OpenListResourceBundle;
+
+/* loaded from: cldrdata.jar:sun/util/resources/cldr/nmg/CurrencyNames_nmg.class */
+public class CurrencyNames_nmg extends OpenListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"aed", "Mɔn B ´Arabe"}, new Object[]{"aoa", "Mɔn Angola"}, new Object[]{"aud", "Dɔ́llɔ Ɔstralia"}, new Object[]{"bhd", "Mɔn Bahrein"}, new Object[]{"bif", "Fraŋ Burundi"}, new Object[]{"bwp", "Mɔn Botswana"}, new Object[]{"cad", "Dɔ́llɔ Kanada"}, new Object[]{"cdf", "Fraŋ bó Kongolɛ̌"}, new Object[]{"chf", "Fraŋ Suisse"}, new Object[]{"cny", "Mɔn bó Chinois"}, new Object[]{"cve", "Mɔn Kapvɛrt"}, new Object[]{"djf", "Fraŋ Jibuti"}, new Object[]{"dzd", "Mɔn Algeria"}, new Object[]{"egp", "Mɔn Ägyptɛn"}, new Object[]{"ern", "Mɔn Erytré"}, new Object[]{"etb", "Mɔn Ethiopia"}, new Object[]{"eur", "Euro"}, new Object[]{"gbp", "Mɔn Ngɛ̄lɛ̄n"}, new Object[]{"ghc", "Mɔn Gana"}, new Object[]{"gmd", "Mɔn Gambia"}, new Object[]{"gns", "Fraŋ Guiné"}, new Object[]{"inr", "Mɔn India"}, new Object[]{"jpy", "Mɔn Japɔn"}, new Object[]{"kes", "Mɔn Kɛnya"}, new Object[]{"kmf", "Fraŋ bó Kɔmɔr"}, new Object[]{"lrd", "Dɔ́llɔ Liberia"}, new Object[]{"lsl", "Mɔn Lesoto"}, new Object[]{"lyd", "Mɔn Libya"}, new Object[]{"mad", "Mɔn Marɔk"}, new Object[]{"mga", "Mɔn Madagaskar"}, new Object[]{"mro", "Mɔn Moritania"}, new Object[]{"mur", "Mɔn Moriss"}, new Object[]{"mwk", "Mɔn Malawi"}, new Object[]{"mzm", "Mɔn Mozambik"}, new Object[]{"nad", "Dɔ́llɔ Namibia"}, new Object[]{"ngn", "Naïra Nigeria"}, new Object[]{"rwf", "Fraŋ Rwanda"}, new Object[]{"sar", "Mɔn Saudi Arabia"}, new Object[]{"scr", "Mɔn Seychɛlle"}, new Object[]{"sdg", "Mɔn Sudan"}, new Object[]{"sdp", "Mɔn Sudan (1957-1998)"}, new Object[]{"shp", "Mɔn má Saint Lina"}, new Object[]{"sll", "Mɔn Leɔne"}, new Object[]{"sos", "Mɔn Somalía"}, new Object[]{"std", "Mɔn Sao tomé na prinship"}, new Object[]{"szl", "Mɔn Ligangeni"}, new Object[]{"tnd", "Mɔn Tunisia"}, new Object[]{"tzs", "Mɔn Tanzania"}, new Object[]{"ugx", "Mɔn Uganda"}, new Object[]{"usd", "Dɔ́llɔ Amɛŕka"}, new Object[]{"xaf", "Fraŋ CFA BEAC"}, new Object[]{"xof", "Fraŋ CFA BCEAO"}, new Object[]{"zar", "Mɔn Afrik yí sí"}, new Object[]{"zmk", "Mɔn Zambia"}, new Object[]{"zwd", "Dɔ́llɔ Zimbabwǝ (1980-2008)"}};
+    }
+}

@@ -1,0 +1,12 @@
+package sun.text.resources.ko;
+
+import sun.util.resources.OpenListResourceBundle;
+
+/* loaded from: localedata.jar:sun/text/resources/ko/JavaTimeSupplementary_ko.class */
+public class JavaTimeSupplementary_ko extends OpenListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"QuarterAbbreviations", new String[]{"1분기", "2분기", "3분기", "4분기"}}, new Object[]{"QuarterNames", new String[]{"제 1/4분기", "제 2/4분기", "제 3/4분기", "제 4/4분기"}}, new Object[]{"QuarterNarrows", new String[]{"1", "2", "3", "4"}}, new Object[]{"calendarname.buddhist", "불교력"}, new Object[]{"calendarname.gregorian", "태양력"}, new Object[]{"calendarname.gregory", "태양력"}, new Object[]{"calendarname.islamic", "이슬람력"}, new Object[]{"calendarname.islamic-civil", "이슬람 상용력"}, new Object[]{"calendarname.islamicc", "이슬람 상용력"}, new Object[]{"calendarname.japanese", "일본력"}, new Object[]{"calendarname.roc", "대만력"}, new Object[]{"field.dayperiod", "오전/오후"}, new Object[]{"field.era", "연호"}, new Object[]{"field.hour", "시"}, new Object[]{"field.minute", "분"}, new Object[]{"field.month", "월"}, new Object[]{"field.second", "초"}, new Object[]{"field.week", "주"}, new Object[]{"field.weekday", "요일"}, new Object[]{"field.year", "년"}, new Object[]{"field.zone", "시간대"}, new Object[]{"java.time.buddhist.DatePatterns", new String[]{"G y년 M월 d일 EEEE", "G y년 M월 d일", "G y. M. d", "G y. M. d"}}, new Object[]{"java.time.buddhist.short.Eras", new String[]{"BC", "불기"}}, new Object[]{"java.time.japanese.DatePatterns", new String[]{"G y년 M월 d일 EEEE", "G y년 M월 d일", "G y. M. d", "G y. M. d"}}, new Object[]{"java.time.japanese.long.Eras", new String[]{"서기", "메이지", "다이쇼", "쇼와", "헤이세이", "레이와"}}, new Object[]{"java.time.japanese.short.Eras", new String[]{"서기", "메이지", "다이쇼", "쇼와", "헤이세이", "레이와"}}, new Object[]{"java.time.long.Eras", new String[]{"서력기원전", "서력기원"}}, new Object[]{"java.time.roc.DatePatterns", new String[]{"G y년 M월 d일 EEEE", "G y년 M월 d일", "G y. M. d", "G y. M. d"}}, new Object[]{"java.time.short.Eras", new String[]{"기원전", "서기"}}, new Object[]{"roc.DatePatterns", new String[]{"GGGG y년 M월 d일 EEEE", "GGGG y년 M월 d일", "GGGG y. M. d", "GGGG y. M. d"}}, new Object[]{"roc.Eras", new String[]{"중화민국전", "중화민국"}}, new Object[]{"roc.short.Eras", new String[]{"중화민국전", "중화민국"}}};
+    }
+}

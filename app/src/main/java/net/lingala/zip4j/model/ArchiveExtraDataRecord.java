@@ -1,0 +1,32 @@
+package net.lingala.zip4j.model;
+
+/* loaded from: zip4j_1.3.1.jar:net/lingala/zip4j/model/ArchiveExtraDataRecord.class */
+public class ArchiveExtraDataRecord {
+    private int signature;
+    private int extraFieldLength;
+    private String extraFieldData;
+
+    public int getSignature() {
+        return this.signature;
+    }
+
+    public void setSignature(int signature) {
+        this.signature = signature;
+    }
+
+    public int getExtraFieldLength() {
+        return this.extraFieldLength;
+    }
+
+    public void setExtraFieldLength(int extraFieldLength) {
+        this.extraFieldLength = extraFieldLength;
+    }
+
+    public String getExtraFieldData() {
+        return this.extraFieldData;
+    }
+
+    public void setExtraFieldData(String extraFieldData) {
+        this.extraFieldData = extraFieldData;
+    }
+}

@@ -1,0 +1,12 @@
+package com.sun.swing.internal.plaf.synth.resources;
+
+import java.util.ListResourceBundle;
+
+/* loaded from: rt.jar:com/sun/swing/internal/plaf/synth/resources/synth_it.class */
+public final class synth_it extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"FileChooser.detailsViewActionLabel.textAndMnemonic", "Dettagli"}, new Object[]{"FileChooser.detailsViewButtonAccessibleName", "Dettagli"}, new Object[]{"FileChooser.detailsViewButtonToolTip.textAndMnemonic", "Dettagli"}, new Object[]{"FileChooser.fileAttrHeader.textAndMnemonic", "Attributi"}, new Object[]{"FileChooser.fileDateHeader.textAndMnemonic", "Modificato"}, new Object[]{"FileChooser.fileNameHeader.textAndMnemonic", "Nome"}, new Object[]{"FileChooser.fileNameLabel.textAndMnemonic", "&Nome file:"}, new Object[]{"FileChooser.fileSizeHeader.textAndMnemonic", "Dimensioni"}, new Object[]{"FileChooser.fileTypeHeader.textAndMnemonic", "Tipo"}, new Object[]{"FileChooser.filesOfTypeLabel.textAndMnemonic", "&Tipo di file:"}, new Object[]{"FileChooser.folderNameLabel.textAndMnemonic", "&Nome cartella:"}, new Object[]{"FileChooser.homeFolderAccessibleName", "Home"}, new Object[]{"FileChooser.homeFolderToolTip.textAndMnemonic", "Home"}, new Object[]{"FileChooser.listViewActionLabel.textAndMnemonic", "Lista"}, new Object[]{"FileChooser.listViewButtonAccessibleName", "Lista"}, new Object[]{"FileChooser.listViewButtonToolTip.textAndMnemonic", "Lista"}, new Object[]{"FileChooser.lookInLabel.textAndMnemonic", "Cerca &in:"}, new Object[]{"FileChooser.newFolderAccessibleName", "Nuova cartella"}, new Object[]{"FileChooser.newFolderActionLabel.textAndMnemonic", "Nuova cartella"}, new Object[]{"FileChooser.newFolderToolTip.textAndMnemonic", "Crea nuova cartella"}, new Object[]{"FileChooser.refreshActionLabel.textAndMnemonic", "Aggiorna"}, new Object[]{"FileChooser.saveInLabel.textAndMnemonic", "Salva in:"}, new Object[]{"FileChooser.upFolderAccessibleName", "Superiore"}, new Object[]{"FileChooser.upFolderToolTip.textAndMnemonic", "Cartella superiore"}, new Object[]{"FileChooser.viewMenuLabel.textAndMnemonic", "Visualizza"}};
+    }
+}

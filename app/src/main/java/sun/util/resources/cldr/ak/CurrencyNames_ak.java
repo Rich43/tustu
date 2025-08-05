@@ -1,0 +1,12 @@
+package sun.util.resources.cldr.ak;
+
+import sun.util.resources.OpenListResourceBundle;
+
+/* loaded from: cldrdata.jar:sun/util/resources/cldr/ak/CurrencyNames_ak.class */
+public class CurrencyNames_ak extends OpenListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"aed", "Ɛmirete Arab Nkabɔmu Deram"}, new Object[]{"aoa", "Angola Kwanza"}, new Object[]{"aud", "Ɔstrelia Dɔla"}, new Object[]{"bhd", "Baren Dina"}, new Object[]{"bif", "Burundi Frank"}, new Object[]{"bwp", "Botswana Pula"}, new Object[]{"cad", "Kanada Dɔla"}, new Object[]{"cdf", "Kongo Frank"}, new Object[]{"chf", "Sweden Frank"}, new Object[]{"cny", "Yuan"}, new Object[]{"cve", "Ɛskudo"}, new Object[]{"djf", "Gyebuti Frank"}, new Object[]{"dzd", "Ɔlgyeria Dina"}, new Object[]{"egp", "Egypt Pɔn"}, new Object[]{"ern", "Ɛretereya Nakfa"}, new Object[]{"etb", "Itiopia Bir"}, new Object[]{"eur", "Iro"}, new Object[]{"gbp", "Breten Pɔn"}, new Object[]{"ghc", "Ghana Sidi"}, new Object[]{"gmd", "Gambia Dalasi"}, new Object[]{"gns", "Gini Frank"}, new Object[]{"inr", "India Rupi"}, new Object[]{"jpy", "Gyapan Yɛn"}, new Object[]{"kes", "Kenya Hyelen"}, new Object[]{"kmf", "Komoro Frank"}, new Object[]{"lrd", "Laeberia Dɔla"}, new Object[]{"lsl", "Lesoto Loti"}, new Object[]{"lyd", "Libya Dina"}, new Object[]{"mad", "Moroko Diram"}, new Object[]{"mga", "Madagasi Frank"}, new Object[]{"mro", "Mɔretenia Ouguiya"}, new Object[]{"mur", "Mɔrehyeɔs Rupi"}, new Object[]{"mwk", "Malawi Kwacha"}, new Object[]{"mzm", "Mozambik Metical"}, new Object[]{"nad", "Namibia Dɔla"}, new Object[]{"ngn", "Naegyeria Naira"}, new Object[]{"rwf", "Rewanda Frank"}, new Object[]{"sar", "Saudi Riyal"}, new Object[]{"scr", "Seyhyɛls Rupi"}, new Object[]{"sdg", "Sudan Dina"}, new Object[]{"sdp", "Sudan Pɔn"}, new Object[]{"shp", "St Helena Pɔn"}, new Object[]{"sll", "Leone"}, new Object[]{"sos", "Somailia Hyelen"}, new Object[]{"std", "Sao Tome ne Principe Dobra"}, new Object[]{"szl", "Lilangeni"}, new Object[]{"tnd", "Tunisia Dina"}, new Object[]{"tzs", "Tanzania Hyelen"}, new Object[]{"ugx", "Uganda Hyelen"}, new Object[]{"usd", "Amɛrika Dɔla"}, new Object[]{"xaf", "Sefa"}, new Object[]{"zar", "Afrika Anaafo Rand"}, new Object[]{"zmk", "Zambia Kwacha"}, new Object[]{"zwd", "Zimbabwe Dɔla"}};
+    }
+}

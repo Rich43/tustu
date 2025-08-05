@@ -1,0 +1,16 @@
+package org.apache.commons.math3.exception;
+
+import org.apache.commons.math3.exception.util.Localizable;
+
+/* loaded from: commons-math3-3.6.1.jar:org/apache/commons/math3/exception/NotStrictlyPositiveException.class */
+public class NotStrictlyPositiveException extends NumberIsTooSmallException {
+    private static final long serialVersionUID = -7824848630829852237L;
+
+    public NotStrictlyPositiveException(Number value) {
+        super(value, INTEGER_ZERO, false);
+    }
+
+    public NotStrictlyPositiveException(Localizable specific, Number value) {
+        super(specific, value, INTEGER_ZERO, false);
+    }
+}

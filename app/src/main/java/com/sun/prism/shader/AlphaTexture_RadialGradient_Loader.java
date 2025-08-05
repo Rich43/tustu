@@ -1,0 +1,23 @@
+package com.sun.prism.shader;
+
+import com.sun.prism.ps.Shader;
+import com.sun.prism.ps.ShaderFactory;
+import java.io.InputStream;
+import java.util.HashMap;
+import javax.swing.text.AbstractDocument;
+
+/* loaded from: jfxrt.jar:com/sun/prism/shader/AlphaTexture_RadialGradient_Loader.class */
+public class AlphaTexture_RadialGradient_Loader {
+    private AlphaTexture_RadialGradient_Loader() {
+    }
+
+    public static Shader loadShader(ShaderFactory factory, InputStream pixelShaderCode) {
+        HashMap<String, Integer> samplers = new HashMap<>();
+        samplers.put("maskInput", 0);
+        samplers.put("colors", 1);
+        HashMap<String, Integer> params = new HashMap<>();
+        params.put("precalc", 1);
+        params.put(AbstractDocument.ContentElementName, 0);
+        return factory.createShader(pixelShaderCode, samplers, params, 1, false, true);
+    }
+}

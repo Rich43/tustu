@@ -1,0 +1,39 @@
+package javax.print.attribute.standard;
+
+import javax.print.attribute.Attribute;
+import javax.print.attribute.EnumSyntax;
+import javax.print.attribute.PrintJobAttribute;
+import javax.print.attribute.PrintRequestAttribute;
+
+/* loaded from: rt.jar:javax/print/attribute/standard/Fidelity.class */
+public final class Fidelity extends EnumSyntax implements PrintJobAttribute, PrintRequestAttribute {
+    private static final long serialVersionUID = 6320827847329172308L;
+    public static final Fidelity FIDELITY_TRUE = new Fidelity(0);
+    public static final Fidelity FIDELITY_FALSE = new Fidelity(1);
+    private static final String[] myStringTable = {"true", "false"};
+    private static final Fidelity[] myEnumValueTable = {FIDELITY_TRUE, FIDELITY_FALSE};
+
+    protected Fidelity(int i2) {
+        super(i2);
+    }
+
+    @Override // javax.print.attribute.EnumSyntax
+    protected String[] getStringTable() {
+        return myStringTable;
+    }
+
+    @Override // javax.print.attribute.EnumSyntax
+    protected EnumSyntax[] getEnumValueTable() {
+        return myEnumValueTable;
+    }
+
+    @Override // javax.print.attribute.Attribute
+    public final Class<? extends Attribute> getCategory() {
+        return Fidelity.class;
+    }
+
+    @Override // javax.print.attribute.Attribute
+    public final String getName() {
+        return "ipp-attribute-fidelity";
+    }
+}

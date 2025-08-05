@@ -1,0 +1,23 @@
+package com.sun.prism.shader;
+
+import com.sun.prism.ps.Shader;
+import com.sun.prism.ps.ShaderFactory;
+import java.io.InputStream;
+import java.util.HashMap;
+
+/* loaded from: jfxrt.jar:com/sun/prism/shader/Solid_LinearGradient_PAD_Loader.class */
+public class Solid_LinearGradient_PAD_Loader {
+    private Solid_LinearGradient_PAD_Loader() {
+    }
+
+    public static Shader loadShader(ShaderFactory factory, InputStream pixelShaderCode) {
+        HashMap<String, Integer> samplers = new HashMap<>();
+        samplers.put("colors", 0);
+        HashMap<String, Integer> params = new HashMap<>();
+        params.put("perspVec", 14);
+        params.put("gradParams", 13);
+        params.put("offset", 12);
+        params.put("fractions", 0);
+        return factory.createShader(pixelShaderCode, samplers, params, -1, true, true);
+    }
+}

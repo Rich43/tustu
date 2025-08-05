@@ -1,0 +1,65 @@
+package com.sun.org.apache.bcel.internal.classfile;
+
+import com.sun.org.apache.bcel.internal.Constants;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+
+/* loaded from: rt.jar:com/sun/org/apache/bcel/internal/classfile/Deprecated.class */
+public final class Deprecated extends Attribute {
+    private byte[] bytes;
+
+    public Deprecated(Deprecated c2) {
+        this(c2.getNameIndex(), c2.getLength(), c2.getBytes(), c2.getConstantPool());
+    }
+
+    public Deprecated(int name_index, int length, byte[] bytes, ConstantPool constant_pool) {
+        super((byte) 8, name_index, length, constant_pool);
+        this.bytes = bytes;
+    }
+
+    Deprecated(int name_index, int length, DataInputStream file, ConstantPool constant_pool) throws IOException {
+        this(name_index, length, (byte[]) null, constant_pool);
+        if (length > 0) {
+            this.bytes = new byte[length];
+            file.readFully(this.bytes);
+            System.err.println("Deprecated attribute with length > 0");
+        }
+    }
+
+    @Override // com.sun.org.apache.bcel.internal.classfile.Attribute, com.sun.org.apache.bcel.internal.classfile.Node
+    public void accept(Visitor v2) {
+        v2.visitDeprecated(this);
+    }
+
+    @Override // com.sun.org.apache.bcel.internal.classfile.Attribute
+    public final void dump(DataOutputStream file) throws IOException {
+        super.dump(file);
+        if (this.length > 0) {
+            file.write(this.bytes, 0, this.length);
+        }
+    }
+
+    public final byte[] getBytes() {
+        return this.bytes;
+    }
+
+    public final void setBytes(byte[] bytes) {
+        this.bytes = bytes;
+    }
+
+    @Override // com.sun.org.apache.bcel.internal.classfile.Attribute
+    public final String toString() {
+        return Constants.ATTRIBUTE_NAMES[8];
+    }
+
+    @Override // com.sun.org.apache.bcel.internal.classfile.Attribute
+    public Attribute copy(ConstantPool constant_pool) {
+        Deprecated c2 = (Deprecated) clone();
+        if (this.bytes != null) {
+            c2.bytes = (byte[]) this.bytes.clone();
+        }
+        c2.constant_pool = constant_pool;
+        return c2;
+    }
+}

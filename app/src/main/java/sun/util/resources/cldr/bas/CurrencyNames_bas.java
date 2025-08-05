@@ -1,0 +1,12 @@
+package sun.util.resources.cldr.bas;
+
+import sun.util.resources.OpenListResourceBundle;
+
+/* loaded from: cldrdata.jar:sun/util/resources/cldr/bas/CurrencyNames_bas.class */
+public class CurrencyNames_bas extends OpenListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"aed", "Dirhàm èmìrâ"}, new Object[]{"aoa", "Kwànza àŋgolà"}, new Object[]{"aud", "Dɔ̀lâr òstralìà"}, new Object[]{"bhd", "Dinâr Bàraìn"}, new Object[]{"bif", "Frǎŋ bùrundì"}, new Object[]{"bwp", "Pùla Bòtswanà"}, new Object[]{"cad", "Dɔ̀lâr kànadà"}, new Object[]{"cdf", "Frǎŋ kòŋgo"}, new Object[]{"chf", "Frǎŋ sùwîs"}, new Object[]{"cny", "Yùan kinà"}, new Object[]{"cve", "Èskudò kabwe᷆r"}, new Object[]{"djf", "Frǎŋ jìbutì"}, new Object[]{"dzd", "Dìnâr àlgerìà"}, new Object[]{"egp", "Paùnd ègîptò"}, new Object[]{"ern", "Nafkà èrìtrěà"}, new Object[]{"etb", "Bîr ètìopìà"}, new Object[]{"eur", "Èrô"}, new Object[]{"gbp", "Stɛrlìŋ ŋgìsì"}, new Object[]{"ghc", "Sèdi gānà"}, new Object[]{"gmd", "Dalasì gambìà"}, new Object[]{"gns", "Frǎŋ gìnê"}, new Object[]{"inr", "Rùpi īndìà"}, new Object[]{"jpy", "Yɛ̂n yàpân"}, new Object[]{"kes", "Silîŋ kenìà"}, new Object[]{"kmf", "Frǎŋ kòmorà"}, new Object[]{"lrd", "Dɔ̀lâr lìberìà"}, new Object[]{"lsl", "Lotì lèsòtò"}, new Object[]{"lyd", "Dìnâr libìà"}, new Object[]{"mad", "Dìrham màrôk"}, new Object[]{"mga", "Frǎŋ màlàgasì"}, new Object[]{"mro", "Ùgwiya mòrìtanìa"}, new Object[]{"mur", "Rupìɛ̀ mòrîs"}, new Object[]{"mwk", "Kwaca màlawì"}, new Object[]{"mzm", "Mètìkal mòsàmbîk"}, new Object[]{"nad", "Dɔ̀lâr nàmibìà"}, new Object[]{"ngn", "Nayrà nìgerìà"}, new Object[]{"rwf", "Frǎŋ Rùandà"}, new Object[]{"sar", "Rìal sàudì"}, new Object[]{"scr", "Rùpiɛ̀ sèsɛ̂l"}, new Object[]{"sdg", "Dìnâr sùdân"}, new Object[]{"sdp", "Paùnd sùdân"}, new Object[]{"shp", "Paùnd hèlenà"}, new Object[]{"sll", "Lèonɛ̀"}, new Object[]{"sos", "Silîŋ sòmàli"}, new Object[]{"std", "Dobrà sàotòme"}, new Object[]{"szl", "Lìlàŋgeni swàzì"}, new Object[]{"tnd", "Dìnâr tùnîs"}, new Object[]{"tzs", "Silîŋ tànzànià"}, new Object[]{"ugx", "Silîŋ ùgàndà"}, new Object[]{"usd", "Dɔla àmerkà"}, new Object[]{"xaf", "Frǎŋ CFA (BEAC)"}, new Object[]{"xof", "Frǎŋ CFA (BCEAO)"}, new Object[]{"zar", "Rân àfrǐkàsɔ̀"}, new Object[]{"zmk", "Kwàca sàmbià"}, new Object[]{"zwd", "Dɔ̀lâr sìmbàbwê"}};
+    }
+}

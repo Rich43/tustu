@@ -1,0 +1,14 @@
+package sun.text.resources.no;
+
+import com.sun.org.apache.xerces.internal.impl.xs.SchemaSymbols;
+import org.icepdf.core.util.PdfOps;
+import sun.util.resources.OpenListResourceBundle;
+
+/* loaded from: localedata.jar:sun/text/resources/no/JavaTimeSupplementary_no.class */
+public class JavaTimeSupplementary_no extends OpenListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // sun.util.resources.OpenListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"QuarterAbbreviations", new String[]{"K1", "K2", "K3", "K4"}}, new Object[]{"QuarterNames", new String[]{"1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"}}, new Object[]{"QuarterNarrows", new String[]{"1", "2", "3", "4"}}, new Object[]{"calendarname.buddhist", "buddhistisk kalender"}, new Object[]{"calendarname.gregorian", "gregoriansk kalender"}, new Object[]{"calendarname.gregory", "gregoriansk kalender"}, new Object[]{"calendarname.islamic", "islamsk kalender"}, new Object[]{"calendarname.islamic-civil", "islamsk sivil kalender"}, new Object[]{"calendarname.islamicc", "islamsk sivil kalender"}, new Object[]{"calendarname.japanese", "japansk kalender"}, new Object[]{"calendarname.roc", "kalender for Republikken Kina"}, new Object[]{"field.dayperiod", "AM/PM"}, new Object[]{"field.era", "tidsalder"}, new Object[]{"field.hour", SchemaSymbols.ATTVAL_TIME}, new Object[]{"field.minute", "minutt"}, new Object[]{"field.month", "måned"}, new Object[]{"field.second", "sekund"}, new Object[]{"field.week", "uke"}, new Object[]{"field.weekday", "ukedag"}, new Object[]{"field.year", "år"}, new Object[]{"field.zone", "sone"}, new Object[]{"islamic.DatePatterns", new String[]{"EEEE d. MMMM y GGGG", "d. MMMM y GGGG", "d. MMM y GGGG", "d.M y GGGG"}}, new Object[]{"java.time.buddhist.DatePatterns", new String[]{"EEEE d. MMMM y G", "d. MMMM y G", "d. MMM y G", "d.M yyyy"}}, new Object[]{"java.time.islamic.DatePatterns", new String[]{"EEEE d. MMMM y G", "d. MMMM y G", "d. MMM y G", "d.M y G"}}, new Object[]{"java.time.japanese.DatePatterns", new String[]{"EEEE d. MMMM y G", "d. MMMM y G", "d. MMM y G", "d.M y G"}}, new Object[]{"java.time.long.Eras", new String[]{"f.Kr.", "e.Kr."}}, new Object[]{"java.time.roc.DatePatterns", new String[]{"EEEE d. MMMM y G", "d. MMMM y G", "d. MMM y G", "d.M y G"}}, new Object[]{"java.time.short.Eras", new String[]{"f.Kr.", "e.Kr."}}, new Object[]{"roc.DatePatterns", new String[]{"EEEE d. MMMM y GGGG", "d. MMMM y GGGG", "d. MMM y GGGG", "d.M y GGGG"}}, new Object[]{"java.time.japanese.long.Eras", new String[]{"etter Kristus", "Meiji", "Taishō", "Shōwa", "Heisei", "Reiwa"}}, new Object[]{"java.time.japanese.short.Eras", new String[]{"e.Kr.", PdfOps.M_TOKEN, "T", PdfOps.S_TOKEN, PdfOps.H_TOKEN, "R"}}};
+    }
+}

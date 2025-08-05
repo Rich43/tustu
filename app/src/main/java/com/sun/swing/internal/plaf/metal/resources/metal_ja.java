@@ -1,0 +1,12 @@
+package com.sun.swing.internal.plaf.metal.resources;
+
+import java.util.ListResourceBundle;
+
+/* loaded from: rt.jar:com/sun/swing/internal/plaf/metal/resources/metal_ja.class */
+public final class metal_ja extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"FileChooser.detailsViewActionLabel.textAndMnemonic", "詳細"}, new Object[]{"FileChooser.detailsViewButtonAccessibleName", "詳細"}, new Object[]{"FileChooser.detailsViewButtonToolTip.textAndMnemonic", "詳細"}, new Object[]{"FileChooser.fileAttrHeader.textAndMnemonic", "属性"}, new Object[]{"FileChooser.fileDateHeader.textAndMnemonic", "修正日"}, new Object[]{"FileChooser.fileNameHeader.textAndMnemonic", "名前"}, new Object[]{"FileChooser.fileNameLabel.textAndMnemonic", "ファイル名(&N):"}, new Object[]{"FileChooser.fileSizeHeader.textAndMnemonic", "サイズ"}, new Object[]{"FileChooser.fileTypeHeader.textAndMnemonic", "タイプ"}, new Object[]{"FileChooser.filesOfTypeLabel.textAndMnemonic", "ファイルのタイプ(&T):"}, new Object[]{"FileChooser.folderNameLabel.textAndMnemonic", "フォルダ名(&N):"}, new Object[]{"FileChooser.homeFolderAccessibleName", "ホーム"}, new Object[]{"FileChooser.homeFolderToolTip.textAndMnemonic", "ホーム"}, new Object[]{"FileChooser.listViewActionLabel.textAndMnemonic", "リスト"}, new Object[]{"FileChooser.listViewButtonAccessibleName", "リスト"}, new Object[]{"FileChooser.listViewButtonToolTip.textAndMnemonic", "リスト"}, new Object[]{"FileChooser.lookInLabel.textAndMnemonic", "ファイルの場所(&I):"}, new Object[]{"FileChooser.newFolderAccessibleName", "新規フォルダ"}, new Object[]{"FileChooser.newFolderActionLabel.textAndMnemonic", "新規フォルダ"}, new Object[]{"FileChooser.newFolderToolTip.textAndMnemonic", "新規フォルダの作成"}, new Object[]{"FileChooser.refreshActionLabel.textAndMnemonic", "リフレッシュ"}, new Object[]{"FileChooser.saveInLabel.textAndMnemonic", "保存:"}, new Object[]{"FileChooser.upFolderAccessibleName", "上へ"}, new Object[]{"FileChooser.upFolderToolTip.textAndMnemonic", "1レベル上へ"}, new Object[]{"FileChooser.viewMenuLabel.textAndMnemonic", "表示"}, new Object[]{"MetalTitlePane.close.titleAndMnemonic", "閉じる(&C)"}, new Object[]{"MetalTitlePane.iconify.titleAndMnemonic", "最小化(&E)"}, new Object[]{"MetalTitlePane.maximize.titleAndMnemonic", "最大化(&X)"}, new Object[]{"MetalTitlePane.restore.titleAndMnemonic", "復元(&R)"}};
+    }
+}

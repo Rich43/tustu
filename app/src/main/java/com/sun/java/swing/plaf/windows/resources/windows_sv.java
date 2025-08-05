@@ -1,0 +1,12 @@
+package com.sun.java.swing.plaf.windows.resources;
+
+import java.util.ListResourceBundle;
+
+/* loaded from: rt.jar:com/sun/java/swing/plaf/windows/resources/windows_sv.class */
+public final class windows_sv extends ListResourceBundle {
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object[], java.lang.Object[][]] */
+    @Override // java.util.ListResourceBundle
+    protected final Object[][] getContents() {
+        return new Object[]{new Object[]{"FileChooser.detailsViewActionLabel.textAndMnemonic", "Detaljer"}, new Object[]{"FileChooser.detailsViewButtonAccessibleName", "Detaljer"}, new Object[]{"FileChooser.detailsViewButtonToolTip.textAndMnemonic", "Detaljer"}, new Object[]{"FileChooser.fileAttrHeader.textAndMnemonic", "Attribut"}, new Object[]{"FileChooser.fileDateHeader.textAndMnemonic", "Ändrad"}, new Object[]{"FileChooser.fileNameHeader.textAndMnemonic", "Namn"}, new Object[]{"FileChooser.fileNameLabel.textAndMnemonic", "Fil&namn:"}, new Object[]{"FileChooser.fileSizeHeader.textAndMnemonic", "Storlek"}, new Object[]{"FileChooser.fileTypeHeader.textAndMnemonic", "Typ"}, new Object[]{"FileChooser.filesOfTypeLabel.textAndMnemonic", "Filer av &typen:"}, new Object[]{"FileChooser.folderNameLabel.textAndMnemonic", "Mapp&namn:"}, new Object[]{"FileChooser.homeFolderAccessibleName", "Hem"}, new Object[]{"FileChooser.homeFolderToolTip.textAndMnemonic", "Hem"}, new Object[]{"FileChooser.listViewActionLabel.textAndMnemonic", "Lista"}, new Object[]{"FileChooser.listViewButtonAccessibleName", "Lista"}, new Object[]{"FileChooser.listViewButtonToolTip.textAndMnemonic", "Lista"}, new Object[]{"FileChooser.lookInLabel.textAndMnemonic", "Leta &i:"}, new Object[]{"FileChooser.newFolderAccessibleName", "Ny mapp"}, new Object[]{"FileChooser.newFolderActionLabel.textAndMnemonic", "Ny mapp"}, new Object[]{"FileChooser.newFolderToolTip.textAndMnemonic", "Skapa ny mapp"}, new Object[]{"FileChooser.refreshActionLabel.textAndMnemonic", "Förnya"}, new Object[]{"FileChooser.saveInLabel.textAndMnemonic", "Spara i:"}, new Object[]{"FileChooser.upFolderAccessibleName", "Upp"}, new Object[]{"FileChooser.upFolderToolTip.textAndMnemonic", "Upp en nivå"}, new Object[]{"FileChooser.viewMenuButtonAccessibleName", "Menyn Visa"}, new Object[]{"FileChooser.viewMenuButtonToolTipText", "Menyn Visa"}, new Object[]{"FileChooser.viewMenuLabel.textAndMnemonic", "Vy"}};
+    }
+}
