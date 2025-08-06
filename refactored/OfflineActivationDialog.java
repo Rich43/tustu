@@ -63,6 +63,7 @@ public class OfflineActivationDialog extends JDialog implements ClipboardOwner {
         this.i18n = i18n;
         this.activationRequest = request;
         this.appInfo = appInfo;
+        ActivationValidator.getInstance().setLocalRequest(request);
         buildUi();
     }
 
