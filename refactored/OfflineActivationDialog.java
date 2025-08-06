@@ -4,10 +4,13 @@ import bH.W;
 import bH.aa;
 import com.efiAnalytics.ui.aN;
 import com.efiAnalytics.ui.bV;
-import com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler;
-import f.C1719a;
-import f.C1720b;
-import f.C1722d;
+import az.ActivationData;
+import az.ActivationMessages;
+import az.ActivationParseException;
+import az.ActivationRequest;
+import az.ActivationResult;
+import az.ActivationValidator;
+import az.AppInfo;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dialog;
@@ -44,30 +47,30 @@ import org.icepdf.ri.common.FileExtensionUtils;
  */
 public class OfflineActivationDialog extends JDialog implements ClipboardOwner {
 
-    private final C1720b activationRequestBuilder;
+    private final ActivationRequest activationRequest;
     private final JTextPane requestText;
     private final JTextPane activationCodeText;
-    private C1719a activationData;
+    private ActivationData activationData;
     private final aa i18n;
-    private final InterfaceC0943d appInfo;
+    private final AppInfo appInfo;
     private JButton acceptButton;
     private JButton cancelButton;
 
-    public OfflineActivationDialog(Window owner, InterfaceC0943d appInfo, aa i18n, C1720b requestBuilder) throws IllegalArgumentException {
-        super(owner, i18n.a("Offline Activate") + " " + W.b(appInfo.a(), "Lite!", ""), Dialog.ModalityType.APPLICATION_MODAL);
+    public OfflineActivationDialog(Window owner, AppInfo appInfo, aa i18n, ActivationRequest request) throws IllegalArgumentException {
+        super(owner, i18n.a("Offline Activate") + " " + W.b(appInfo.getEdition(), "Lite!", ""), Dialog.ModalityType.APPLICATION_MODAL);
         this.requestText = new JTextPane();
         this.activationCodeText = new JTextPane();
         this.i18n = i18n;
-        this.activationRequestBuilder = requestBuilder;
+        this.activationRequest = request;
         this.appInfo = appInfo;
         buildUi();
     }
 
     private void buildUi() throws IllegalArgumentException {
         JPanel content = new JPanel(new BorderLayout());
-        content.setBorder(BorderFactory.createTitledBorder(appInfo.f() + " " + i18n.a("Offline Registration Activation")));
+        content.setBorder(BorderFactory.createTitledBorder(appInfo.getProductName() + " " + i18n.a("Offline Registration Activation")));
 
-        acceptButton = new JButton(i18n.a(XIncludeHandler.HTTP_ACCEPT));
+        acceptButton = new JButton(i18n.a("Accept"));
         cancelButton = new JButton(i18n.a("Cancel"));
 
         JLabel instructions = new JLabel();
@@ -90,7 +93,7 @@ public class OfflineActivationDialog extends JDialog implements ClipboardOwner {
         requestText.setEditable(false);
         requestText.setBackground(Color.LIGHT_GRAY);
         try {
-            requestText.setText(activationRequestBuilder.a());
+            requestText.setText(activationRequest.toBase64());
             requestText.selectAll();
         } catch (IOException e) {
             bV.d(e.getMessage(), this);
@@ -167,7 +170,7 @@ public class OfflineActivationDialog extends JDialog implements ClipboardOwner {
     }
 
     private void loadActivationFromFile() {
-        String path = bV.b(this, i18n.a("Load Activation From File"), new String[]{FileExtensionUtils.txt}, "*.txt", appInfo.b());
+        String path = bV.b(this, i18n.a("Load Activation From File"), new String[]{FileExtensionUtils.txt}, "*.txt", appInfo.getDataDirectory());
         if (path == null || path.equals("")) {
             return;
         }
@@ -196,7 +199,7 @@ public class OfflineActivationDialog extends JDialog implements ClipboardOwner {
     private void saveRequestToFile() {
         requestText.selectAll();
         String requestValue = requestText.getText();
-        String path = bV.a(this, "Save Activation Request to File", new String[]{FileExtensionUtils.txt}, appInfo.f() + "ActivationRequest.txt", appInfo.b());
+        String path = bV.a(this, "Save Activation Request to File", new String[]{FileExtensionUtils.txt}, appInfo.getProductName() + "ActivationRequest.txt", appInfo.getDataDirectory());
         if (path == null || path.equals("")) {
             return;
         }
@@ -240,21 +243,21 @@ public class OfflineActivationDialog extends JDialog implements ClipboardOwner {
         String code = getActivationCodeText();
         if (code != null && !code.trim().equals("")) {
             try {
-                activationData = new C1719a(code);
-                activationData.i(code);
-                if (activationData.h().before(new Date())) {
+                activationData = new ActivationData(code);
+                activationData.setRawData(code);
+                if (activationData.getRenewalDate().before(new Date())) {
                     bV.d("This Activation code has expired. Please request a new one from:\nhttps://www.efianalytics.com/activate", this);
                     return;
                 }
-                C1722d result = o.d().a(activationData);
-                if (result.a() != 0) {
-                    bV.d(result.b(), this);
+                ActivationResult result = ActivationValidator.getInstance().validate(activationData);
+                if (result.getCode() != 0) {
+                    bV.d(result.getMessage(), this);
                     activationData = null;
                     acceptButton.setEnabled(false);
                     return;
                 }
-            } catch (f.h e) {
-                bV.d(i18n.a(C0942c.f6471d), this);
+            } catch (ActivationParseException e) {
+                bV.d(i18n.a(ActivationMessages.INVALID_SERVER_CODE), this);
                 activationData = null;
                 acceptButton.setEnabled(false);
                 return;
@@ -267,7 +270,7 @@ public class OfflineActivationDialog extends JDialog implements ClipboardOwner {
     public void lostOwnership(Clipboard clipboard, Transferable transferable) {
     }
 
-    public C1719a getActivationData() {
+    public ActivationData getActivationData() {
         return activationData;
     }
 }
