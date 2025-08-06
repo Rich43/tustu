@@ -8,9 +8,12 @@ connectivity.
 
 from __future__ import annotations
 
+import argparse
 import base64
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+import logging
+import os
 
 
 class ActivationParseError(Exception):
@@ -169,3 +172,77 @@ class ActivationValidator:
             result.code = 2
             result.message = "Invalid activation data."
         return result
+
+
+def _load_activation_code(value: str) -> str:
+    """Return the activation code text.
+
+    If *value* points to an existing file, its contents are returned;
+    otherwise the value itself is treated as the encoded string.
+    """
+
+    if os.path.isfile(value):
+        with open(value, "r", encoding="utf-8") as fh:
+            return fh.read().strip()
+    return value.strip()
+
+
+if __name__ == "__main__":  # pragma: no cover - manual debugging entry point
+    parser = argparse.ArgumentParser(
+        description="Validate offline activation codes"
+    )
+    parser.add_argument(
+        "code",
+        help="Base64 activation code or path to a file containing it",
+    )
+    parser.add_argument(
+        "--hardware-id", "-H", default="", help="Local hardware identifier"
+    )
+    parser.add_argument(
+        "--motherboard-id", "-M", default="", help="Local motherboard identifier"
+    )
+    parser.add_argument(
+        "--device-id", "-D", default="", help="Local device identifier"
+    )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Enable verbose debugging output",
+    )
+    args = parser.parse_args()
+
+    logging.basicConfig(
+        level=logging.DEBUG if args.debug else logging.INFO,
+        format="%(message)s",
+    )
+
+    activation_code = _load_activation_code(args.code)
+    logging.debug("Loaded activation code: %s", activation_code)
+
+    try:
+        data = ActivationData.from_base64(activation_code)
+    except ActivationParseError as exc:  # pragma: no cover - runtime safeguard
+        logging.error("Failed to parse activation data: %s", exc)
+        raise SystemExit(1) from exc
+
+    logging.debug("Parsed activation data: %s", data)
+
+    request = ActivationRequest(
+        hardware_id=args.hardware_id,
+        motherboard_id=args.motherboard_id,
+        device_id=args.device_id,
+    )
+
+    validator = ActivationValidator.get_instance()
+    validator.set_local_request(request)
+    logging.debug("Local request: %s", request)
+
+    result = validator.validate(data)
+    logging.info("Validation result: code=%s message=%s", result.code, result.message)
+
+    if result.data:
+        logging.info(
+            "Activation count: %s renewal date: %s",
+            result.data.activation_count,
+            result.data.renewal_date.isoformat(),
+        )
